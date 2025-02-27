@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/environment.nix
     ];
 
   # Bootloader.
@@ -82,20 +83,6 @@
  #
  #    ];
  #  };
-
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.abdyllaan = {
-    isNormalUser = true;
-    shell = pkgs.fish;
-    description = "abdyllaan";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
-  };
-
    environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
     konsole
@@ -104,58 +91,7 @@
   # Install firefox.
   # programs.firefox.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    nextcloud-client
-    obs-studio
-    onlyoffice-desktopeditors
-    python3
-    tailscale
-    winbox4
-    android-studio
-    nordic
-    intel-compute-runtime
-    qemu_full
-    virt-manager
-    libusb1
-  ];
-
-
-  virtualisation.docker.enable = true;
-  users.extraGroups.docker.members = [ "abdyllaan" ];
-
-  programs.nix-ld.enable=true;
-  
- #  #virtualbox
- # virtualisation.virtualbox.host = {
- #   enable = true;
- #   addNetworkInterface = true;
- #   enableExtensionPack = true;
- #  # enableKvm = true;
- #
- # };
- # users.extraGroups.vboxusers.members = [ "abdyllaan" ];
-
-
-  # install qemu kvm
-  virtualisation.libvirtd.enable = true;  # Mengaktifkan libvirt untuk manajemen VM
-  users.extraGroups.libvirtd.members = [ "abdyllaan" ];
-
-  # enable the tailscale service
-  services.tailscale.enable = true;
-  # services.teamviewer.enable = true;
-
-
-  programs.fish ={
-    enable = true;
-
-  };
-
-  # Some programs need SUID wrappers, can be configured further or are
+   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
