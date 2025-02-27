@@ -11,6 +11,8 @@
       ll = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
+      nfz = "nvim $(fzf)";
+      cfz = "cd $(find . -type d | fzf)";
       nhms = "nvim ~/nix/home.nix";
       ncns = "nvim ~/nix/configuration.nix";
       hms = "home-manager switch --flake ~/nix#abdyllaan";
@@ -20,6 +22,7 @@
       c = "clear";
       spf = "superfile";
       nano = "nvim";
+      n = "nvim";
     };
   };
 }
