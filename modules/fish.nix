@@ -11,7 +11,7 @@
       ll = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
-      nfz = "nvim $(fzf)";
+      nfz = "nvim (fzf)";
       cfz = "cd $(find . -type d | fzf)";
       nhms = "nvim ~/nix/home.nix";
       ncns = "nvim ~/nix/configuration.nix";
