@@ -1,0 +1,34 @@
+{ pkgs, ... }: {
+   home.packages = with pkgs; [
+    tig
+    bat
+    fd
+    ripgrep
+    neofetch
+    telegram-desktop
+    superfile
+    lsd
+    gcc
+    nodejs_23
+    unzip
+    fuse
+    appimage-run
+    android-tools
+    warp-terminal
+    cava
+    zapzap
+    ghostty
+    fira-code 
+    brave
+    github-desktop
+    mpv
+    wget
+    nitch
+    bottom
+    jetbrains-mono
+    wl-clipboard
+    tmux
+    nordic
+    tree
+  ];
+}
