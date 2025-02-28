@@ -32,6 +32,9 @@
     tree
     trash-cli
 
+    #python
+    python-launcher
+    
     #laravel
     php84
     php84Packages.composer

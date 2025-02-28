@@ -32,6 +32,10 @@
     virt-manager
     libusb1
     OVMF
+    kdePackages.kdeconnect-kde
+
+    rustc
+    cargo
   ];
   
   # install docker
