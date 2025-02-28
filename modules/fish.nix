@@ -17,12 +17,19 @@
       ncns = "nvim ~/nix/configuration.nix";
       hms = "home-manager switch --flake ~/nix#abdyllaan";
       cns = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
+      
+      #git
+      gc = "git commit -m";
+      gca = "git commit --amend -m";
+      ga = "git add .";
     };
     shellAliases = {
       c = "clear";
       spf = "superfile";
       nano = "nvim";
       n = "nvim";
+      cd = "z";
+      rm = "trash";
     };
   };
 }

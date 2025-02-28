@@ -30,5 +30,11 @@
     tmux
     nordic
     tree
+    trash-cli
+
+    #laravel
+    php84
+    php84Packages.composer
+    yarn
   ];
 }

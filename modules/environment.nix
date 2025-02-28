@@ -31,6 +31,7 @@
     qemu_full
     virt-manager
     libusb1
+    OVMF
   ];
   
   # install docker
@@ -40,7 +41,12 @@
   programs.nix-ld.enable=true;
 
   # install qemu kvm
-  virtualisation.libvirtd.enable = true;  # Mengaktifkan libvirt untuk manajemen VM
+   virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      ovmf.enable = true;
+    };
+  };
   users.extraGroups.libvirtd.members = [ "abdyllaan" ];
 
   # enable the tailscale service
