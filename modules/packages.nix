@@ -31,6 +31,7 @@
     nordic
     tree
     trash-cli
+    discord
 
     #python
     python-launcher
