@@ -12,7 +12,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -33,19 +33,21 @@
     libusb1
     OVMF
     kdePackages.kdeconnect-kde
+    rar
 
+    luarocks
     rustc
     cargo
   ];
-  
+
   # install docker
   virtualisation.docker.enable = true;
   users.extraGroups.docker.members = [ "abdyllaan" ];
 
-  programs.nix-ld.enable=true;
+  programs.nix-ld.enable = true;
 
   # install qemu kvm
-   virtualisation.libvirtd = {
+  virtualisation.libvirtd = {
     enable = true;
     qemu = {
       ovmf.enable = true;
@@ -57,7 +59,7 @@
   services.tailscale.enable = true;
 
   # enable fish
-  programs.fish ={
+  programs.fish = {
     enable = true;
 
   };
