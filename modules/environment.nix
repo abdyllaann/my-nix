@@ -34,6 +34,8 @@
     OVMF
     kdePackages.kdeconnect-kde
 
+
+    luarocks
     rustc
     cargo
   ];
