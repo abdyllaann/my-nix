@@ -17,7 +17,11 @@
       ncns = "nvim ~/nix/configuration.nix";
       hms = "home-manager switch --flake ~/nix#abdyllaan";
       cns = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
-      
+
+      # tailscale
+      tsu = "sudo tailscale up --accept-routes";
+      tsd = "sudo tailscale down";
+
       #git
       gc = "git commit -m";
       gca = "git commit --amend -m";
