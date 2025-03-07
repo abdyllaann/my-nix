@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-   home.packages = with pkgs; [
+  home.packages = with pkgs; [
     tig
     bat
     fd
@@ -18,7 +18,7 @@
     cava
     zapzap
     ghostty
-    fira-code 
+    fira-code
     brave
     github-desktop
     mpv
@@ -35,10 +35,14 @@
 
     #python
     python-launcher
-    
+
     #laravel
     php84
     php84Packages.composer
     yarn
+    cups
+    gutenprint
+    epson-escpr
+
   ];
 }

@@ -38,9 +38,9 @@
     luarocks
     rustc
     cargo
-    gutenprint
-    epson-escpr
-    gutenprintBin
+    # gutenprint
+    # epson-escpr
+    # gutenprintBin
     # epson-201401w
   ];
 
