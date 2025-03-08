@@ -7,7 +7,7 @@
   # manage.
   home.username = "abdyllaan";
   home.homeDirectory = "/home/abdyllaan";
- 
+
   imports = [
     ./modules/packages.nix
     ./modules/git.nix
@@ -72,10 +72,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  
+
   programs.fzf = {
-  enable = true;
-  enableFishIntegration = true;
+    enable = true;
+    enableFishIntegration = true;
   };
-  
+
 }

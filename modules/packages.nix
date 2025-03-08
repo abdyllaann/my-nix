@@ -43,6 +43,6 @@
     cups
     gutenprint
     epson-escpr
-
+    tty-clock
   ];
 }

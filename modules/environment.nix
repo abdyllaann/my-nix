@@ -38,10 +38,12 @@
     luarocks
     rustc
     cargo
-    # gutenprint
+    gutenprint
     # epson-escpr
-    # gutenprintBin
-    # epson-201401w
+    gutenprintBin
+    # epson_201401w
+    # epson_201207w
+    # epson-workforce-635-nx625-series
   ];
 
   # install docker
