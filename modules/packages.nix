@@ -32,7 +32,7 @@
     tree
     trash-cli
     discord
-
+    scrcpy
     #python
     python-launcher
 
