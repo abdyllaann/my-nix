@@ -44,5 +44,10 @@
     gutenprint
     epson-escpr
     tty-clock
+    #golang
+    go
+    gopls
+    delve
+
   ];
 }

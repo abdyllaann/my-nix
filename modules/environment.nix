@@ -23,6 +23,7 @@
     obs-studio
     onlyoffice-desktopeditors
     python3
+    libreoffice
     tailscale
     winbox4
     android-studio

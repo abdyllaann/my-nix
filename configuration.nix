@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/environment.nix
     ];
@@ -25,7 +26,7 @@
   # firewall untuk rustdesk
   networking.firewall.allowedTCPPorts = [ 21115 21116 21117 21118 21119 ];
   networking.firewall.allowedUDPPorts = [ 21116 21117 21118 21119 ];
-  
+
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -41,6 +42,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
+  # services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -55,7 +57,7 @@
 
 
   # configurasi hardware
-  
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -74,16 +76,16 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
- # hardware.opengl = {
- #    enable = true;
- #    driSupport32Bit = true;
- #    extraPackages = with pkgs; [
- #        intel-compute-runtime
- #        rocmPackages.clr.icd
- #
- #    ];
- #  };
-   environment.plasma6.excludePackages = with pkgs.kdePackages; [
+  # hardware.opengl = {
+  #    enable = true;
+  #    driSupport32Bit = true;
+  #    extraPackages = with pkgs; [
+  #        intel-compute-runtime
+  #        rocmPackages.clr.icd
+  #
+  #    ];
+  #  };
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
     konsole
     oxygen
@@ -91,7 +93,7 @@
   # Install firefox.
   # programs.firefox.enable = true;
 
-   # Some programs need SUID wrappers, can be configured further or are
+  # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
