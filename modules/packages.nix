@@ -35,7 +35,7 @@
     scrcpy
     #python
     python-launcher
-
+    teamviewer
     #laravel
     php84
     php84Packages.composer
