@@ -50,6 +50,7 @@
     delve
     xorg.xdm
     jre
-    awscli2
+    terraform
+    awscli
   ];
 }
