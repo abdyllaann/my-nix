@@ -48,6 +48,8 @@
     go
     gopls
     delve
-
+    xorg.xdm
+    jre
+    awscli2
   ];
 }
