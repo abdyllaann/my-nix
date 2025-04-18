@@ -27,7 +27,6 @@
     bottom
     jetbrains-mono
     wl-clipboard
-    tmux
     nordic
     tree
     trash-cli
@@ -45,12 +44,18 @@
     epson-escpr
     tty-clock
     #golang
+    tmux
     go
     gopls
     delve
     xorg.xdm
     jre
     terraform
-    awscli
+    awscli2
+
+    # kubernetes
+    kubectl
+    minikube
+    eksctl
   ];
 }

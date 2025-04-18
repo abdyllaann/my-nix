@@ -5,6 +5,7 @@
       nitch
       set fish_greeting      
       set -gx TERM xterm-256color
+      tmux
     '';
     shellAbbrs = {
       cat = "bat";
@@ -31,7 +32,7 @@
       c = "clear";
       spf = "superfile";
       nano = "nvim";
-      n = "nvim";
+      n = "nvim .";
       cd = "z";
       rm = "trash";
     };
