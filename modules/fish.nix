@@ -5,7 +5,6 @@
       nitch
       set fish_greeting      
       set -gx TERM xterm-256color
-      tmux
     '';
     shellAbbrs = {
       cat = "bat";

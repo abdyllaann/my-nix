@@ -11,7 +11,7 @@
     description = "abdyllaan";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
+      # kdePackages.kate
       #  thunderbird
     ];
   };
@@ -39,13 +39,7 @@
     luarocks
     rustc
     cargo
-    gutenprint
-    # epson-escpr
-    gutenprintBin
     teamviewer
-    # epson_201401w
-    # epson_201207w
-    # epson-workforce-635-nx625-series
   ];
 
   # install docker
