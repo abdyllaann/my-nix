@@ -10,7 +10,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/environment.nix
-      ./modules/hyprland.nix
+      # ./modules/hyprland.nix
     ];
 
   # Bootloader.
@@ -39,13 +39,13 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = false;
+  services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  #services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   # services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
-
+  services.desktopManager.cosmic.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
