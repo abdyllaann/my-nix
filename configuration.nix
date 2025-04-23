@@ -123,4 +123,8 @@
   # program.fish.enable = true;
   nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # kernel xanmod
+  boot.kernelPackages = pkgs.linuxPackages_xanmod;
+  boot.kernelParams = [ "tcp_congestion_control=bbr" ];
 }
