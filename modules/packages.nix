@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     tig
-    bat
     fd
     ripgrep
     neofetch
@@ -57,5 +56,18 @@
     kubectl
     minikube
     eksctl
+    postman
+
+
+    # # hyprland stuff
+    # libsForQt5.xwaylandvideobridge
+    # libnotify
+    # xdg-desktop-portal-gtk
+    # xdg-desktop-portal-hyprland
+    # swayimg
+
+    # other stuff
+    libsForQt5.kcalc
+
   ];
 }

@@ -45,7 +45,7 @@
   services.displayManager.sddm.enable = true;
   # services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.desktopManager.cosmic.enable = true;
+  # services.desktopManager.cosmic.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -59,6 +59,15 @@
 
   # configurasi hardware
 
+  # hyprland
+  # programs.hyprland = {
+  #   enable = true;
+  #   withUWSM = true;
+  #   # xwayland.enable = false;
+  # };
+
+
+  security.pam.services.hyprlock = { };
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

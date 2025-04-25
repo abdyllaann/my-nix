@@ -35,7 +35,7 @@
     OVMF
     kdePackages.kdeconnect-kde
     rar
-    wpsoffice
+    # wpsoffice
     luarocks
     rustc
     cargo
