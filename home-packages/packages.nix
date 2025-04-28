@@ -38,9 +38,16 @@
     php84
     php84Packages.composer
     yarn
+
+
+    # printer
     cups
     gutenprint
     epson-escpr
+    epson_201207w
+    # epson-201401w
+
+
     tty-clock
     #golang
     tmux
@@ -65,9 +72,10 @@
     # xdg-desktop-portal-gtk
     # xdg-desktop-portal-hyprland
     # swayimg
+    devbox
 
     # other stuff
     libsForQt5.kcalc
-
+    libnotify
   ];
 }

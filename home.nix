@@ -9,13 +9,14 @@
   home.homeDirectory = "/home/abdyllaan";
 
   imports = [
-    ./modules/packages.nix
-    ./modules/git.nix
-    ./modules/neovim.nix
-    ./modules/startship.nix
-    ./modules/zoxide.nix
-    ./modules/fish.nix
-    ./modules/hyprland
+    # ./modules/packages.nix
+    # ./modules/git.nix
+    # ./modules/neovim.nix
+    # ./modules/startship.nix
+    # ./modules/zoxide.nix
+    # ./modules/fish.nix
+    # ./modules/bat.nix
+    ./home-packages
     # ./modules/tmux.nix
   ];
   # This value determines the Home Manager release that your configuration is
