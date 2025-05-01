@@ -12,5 +12,16 @@
         file = "gruvbox (Dark) (Medium).sublime-color-scheme";
       };
     };
+    config = {
+      pager = "less -FR";
+      theme = "gruvbox-dark";
+    };
+    extraPackages = with pkgs.bat-extras; [
+      batman
+      batpipe
+      batgrep
+      # batdiff
+    ];
+
   };
 }

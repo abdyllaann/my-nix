@@ -28,7 +28,7 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
-  clock24h = true;
+  # clock24h = true;
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
