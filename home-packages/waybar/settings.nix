@@ -2,7 +2,7 @@
 let
   custom = {
     font = "Maple Mono";
-    font_size = "18px";
+    font_size = "14px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -21,9 +21,9 @@ let
 in
 {
   programs.waybar.settings.mainBar = with custom; {
-    position = "bottom";
+    position = "top";
     layer = "top";
-    height = 28;
+    height = 24;
     margin-top = 0;
     margin-bottom = 0;
     margin-left = 0;
@@ -37,7 +37,7 @@ in
     modules-right = [
       "cpu"
       "memory"
-      (if (host == "desktop") then "disk" else "")
+      (if (host == "killua") then "disk" else "")
       "pulseaudio"
       "network"
       "battery"
@@ -107,7 +107,7 @@ in
       format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
     };
     tray = {
-      icon-size = 20;
+      icon-size = 17;
       spacing = 8;
     };
     pulseaudio = {
@@ -142,7 +142,6 @@ in
     };
     "hyprland/language" = {
       format = "<span foreground='#FABD2F'> </span> {}";
-      format-fr = "FR";
       format-en = "US";
     };
     "custom/launcher" = {

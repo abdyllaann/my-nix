@@ -1,20 +1,20 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.abdyllaan = {
-    isNormalUser = true;
-    shell = pkgs.fish;
-    description = "abdyllaan";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      # kdePackages.kate
-      #  thunderbird
-    ];
-  };
+  # # Define a user account. Don't forget to set a password with ‘passwd’.
+  # users.users.abdyllaan = {
+  #   isNormalUser = true;
+  #   shell = pkgs.zsh;
+  #   description = "abdyllaan";
+  #   extraGroups = [ "networkmanager" "wheel" ];
+  #   packages = with pkgs; [
+  #     # kdePackages.kate
+  #     #  thunderbird
+  #   ];
+  # };
 
 
   # install package
@@ -39,6 +39,7 @@
     luarocks
     rustc
     cargo
+    git
     teamviewer
   ];
 
@@ -65,6 +66,9 @@
     enable = true;
 
   };
+
+
+
 
   # programs.teamviewer = {
   #   enable = true;

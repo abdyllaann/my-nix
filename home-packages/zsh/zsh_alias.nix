@@ -1,9 +1,8 @@
-{
-  hostname,
-  config,
-  pkgs,
-  host,
-  ...
+{ hostname
+, config
+, pkgs
+, host
+, ...
 }:
 {
   programs.zsh = {
@@ -32,6 +31,8 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
+      cns = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
+
       cdnix = "cd ~/nixos-config && codium ~/nixos-config";
       ns = "nom-shell --run zsh";
       nd = "nom develop --command zsh";

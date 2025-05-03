@@ -2,7 +2,7 @@
 {
   programs.yazi = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
     # package = pkgs.yazi-unwrapped;
 
     settings = {

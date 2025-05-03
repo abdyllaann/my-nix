@@ -78,7 +78,7 @@
     brave
     github-desktop
     mpv
-    discord
+    ghostty
     audacity
     bleachbit
     filezilla
@@ -96,6 +96,7 @@
     zenity
     winetricks
     wineWowPackages.wayland
+    htop
 
     ## Printer Support
     cups
@@ -113,7 +114,7 @@
     xorg.xdm
 
     ## Formatter (from input)
-    inputs.alejandra.defaultPackage.${system}
+    #    inputs.alejandra.defaultPackage.${system}
   ];
 }
 

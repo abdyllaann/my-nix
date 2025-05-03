@@ -11,20 +11,20 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "killua"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  #
+  # networking.hostName = "killua"; # Define your hostname.
+  # # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # firewall untuk rustdesk
-  networking.firewall.allowedTCPPorts = [ 21115 21116 21117 21118 21119 ];
-  networking.firewall.allowedUDPPorts = [ 21116 21117 21118 21119 ];
-
+  # # firewall untuk rustdesk
+  # networking.firewall.allowedTCPPorts = [ 21115 21116 21117 21118 21119 ];
+  # networking.firewall.allowedUDPPorts = [ 21116 21117 21118 21119 ];
+  #
   # Enable networking
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
@@ -34,13 +34,10 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  # services.displayManager.ly.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  # services.desktopManager.cosmic.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -67,11 +64,11 @@
   #
   #    ];
   #  };
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    plasma-browser-integration
-    konsole
-    oxygen
-  ];
+  # environment.plasma6.excludePackages = with pkgs.kdePackages; [
+  #   plasma-browser-integration
+  #   konsole
+  #   oxygen
+  # ];
   # Install firefox.
   # programs.firefox.enable = true;
 
@@ -86,7 +83,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -104,6 +101,7 @@
   # program.fish.enable = true;
   nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
 
 }

@@ -1,14 +1,14 @@
 { pkgs, host, ... }:
-let
-  text = "rgb(251, 241, 199)";
-in
+# let
+#   text = "rgb(251, 241, 199)";
+# in
 {
   home.packages = [ pkgs.hyprlock ];
   xdg.configFile."hypr/hyprlock.conf".text = ''
     # BACKGROUND
     background {
       monitor =
-      path = ${../../../wallpapers/otherWallpaper/gruvbox/forest_road.jpg}
+      path = ${../../wallpapers/otherWallpaper/gruvbox/forest_road.jpg}
       blur_passes = 2
       contrast = 0.8916
       brightness = 0.8172
