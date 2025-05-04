@@ -34,7 +34,7 @@
       font_size = 115
       font_family = Maple Mono Bold
       shadow_passes = 3
-      position = 0, ${if (host == "laptop") then "-25" else "-150"}
+      position = 0, -25}
       halign = center
       valign = top
     }
@@ -47,7 +47,7 @@
       font_size = 18
       font_family = Maple Mono
       shadow_passes = 3
-      position = 0, ${if (host == "laptop") then "-225" else "-350"}
+      position = 0, -255}
       halign = center
       valign = top
     }
@@ -63,7 +63,7 @@
       border_color = rgba(255, 255, 255, 0)
       rotate = 0
 
-      position = 0, ${if (host == "laptop") then "120" else "270"}
+      position = 0, 120}
       halign = center
       valign = bottom
     }
@@ -75,7 +75,7 @@
       color = rgba(235, 219, 178, 1)
       font_size = 15
       font_family = Maple Mono Bold
-      position = 0, ${if (host == "laptop") then "131" else "281"}
+      position = 0, 131}
       halign = center
       valign = bottom
     }
@@ -98,7 +98,7 @@
       fade_on_empty = false
       placeholder_text = <i><span foreground="##fbf1c7">Enter Password</span></i>
       hide_input = false
-      position = 0, ${if (host == "laptop") then "50" else "200"}
+      position = 0, 50}
       halign = center
       valign = bottom
     }

@@ -18,7 +18,6 @@
     ttyper
     cbonsai
     cmatrix
-    pipes
     sl
     wavemon
     wl-clipboard
@@ -32,8 +31,6 @@
     gdb
     cmake
     gnumake
-    llvmPackages_20.clang-tools
-    valgrind
     nodejs_23
     yarn
     go
@@ -65,38 +62,22 @@
     android-tools
     scrcpy
 
-    ## Fonts
-    fira-code
-    jetbrains-mono
 
     ## Networking / Remote Access
     teamviewer
 
     ## GUI Apps
+    alacritty
     telegram-desktop
     zapzap
     brave
     github-desktop
     mpv
-    ghostty
-    audacity
-    bleachbit
     filezilla
-    gnome-disk-utility
     libreoffice
-    ldtk
-    tiled
     mission-center
     obs-studio
-    pavucontrol
-    pitivi
-    soundwireserver
-    thunderbird
     vlc
-    zenity
-    winetricks
-    wineWowPackages.wayland
-    htop
 
     ## Printer Support
     cups

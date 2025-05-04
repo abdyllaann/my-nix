@@ -1,4 +1,4 @@
-{ host, ... }:
+{ ... }:
 let
   custom = {
     font = "Maple Mono";
@@ -37,7 +37,7 @@ in
     modules-right = [
       "cpu"
       "memory"
-      (if (host == "killua") then "disk" else "")
+      "disk"
       "pulseaudio"
       "network"
       "battery"

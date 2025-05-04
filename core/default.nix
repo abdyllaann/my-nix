@@ -3,17 +3,17 @@
   imports = [
     ./environment.nix
     ./kernel.nix
-    #    ./sound.nix
-    #    ./wayland.nix
-    #    ./xserver.nix
-    #    ./flatpak.nix
-    #    ./network.nix
+    ./sound.nix
+    ./wayland.nix
+    ./xserver.nix
+    ./flatpak.nix
+    ./program.nix
+    ./virtualization.nix
     # ./nh.nix
     ./cachix.nix
     ./user.nix
     ./cosmic.nix
     ./networking.nix
-    # ./xfce/xfce.nix
   ];
 
 

@@ -10,11 +10,8 @@
     ./starship.nix
     ./zoxide.nix
     ./zsh
-    #    ./aseprite/aseprite.nix # pixel art editor
-    #    ./audacious.nix # music player
-    #    ./bat.nix # better cat command
-    ##./browser.nix # firefox based browser
-    #./btop.nix # resouces monitor 
+    ./browser.nix # firefox based browser
+    # ./btop.nix # resouces monitor 
     ./cava.nix # audio visualizer
     # ./discord/discord.nix # discord with gruvbox
     # ./fastfetch.nix # fetch tool
@@ -22,9 +19,9 @@
     # ./ghostty.nix # terminal
     #    ./git.nix # version control
     #    ./gnome.nix # gnome apps
-    #    ./gtk.nix # gtk theme
-    #    ./hyprland # window manager
-    #    ./kitty.nix # terminal
+    ./fonts.nix # gtk theme
+    # ./hyprland # window manager
+    ./kitty.nix # terminal
     #    ./lazygit.nix
     #    ./nemo.nix # file manager
     # ./obsidian.nix
@@ -35,9 +32,10 @@
     #    ./swaylock.nix # lock screen
     #    ./swayosd.nix # brightness / volume wiget
     #    ./swaync/swaync.nix # notification deamon
-    #    ./waybar # status bar
+    ./waybar # status bar
     #    ./waypaper.nix # GUI wallpaper picker
     #   ./xdg-mimes.nix # xdg config
     # ./yazi.nix # terminal file manager
+    # ./monolisa
   ];
 }
