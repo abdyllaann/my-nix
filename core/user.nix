@@ -1,38 +1,3 @@
-# { pkgs
-# , inputs
-# , username
-# , host
-# , ...
-# }: {
-#
-#   # Define a user account. Don't forget to set a password with ‘passwd’.
-#   users.users.abdyllaan = {
-#     isNormalUser = true;
-#     shell = pkgs.fish;
-#     description = "abdyllaan";
-#     extraGroups = [ "networkmanager" "wheel" ];
-#     packages = with pkgs; [
-#       # kdePackages.kate
-#       #  thunderbird
-#     ];
-#   };
-#
-#   programs.zsh = {
-#     enable = true;
-#
-#   };
-#
-#   # enable fish
-#   programs.fish = {
-#     enable = true;
-#
-#   };
-#
-#
-# }
-#
-#
-
 { pkgs
 , inputs
 , username

@@ -12,7 +12,6 @@
       cd = "z";
       tt = "gtrash put";
       cat = "bat";
-      nano = "micro";
       code = "codium";
       diff = "delta --diff-so-fancy --side-by-side";
       less = "bat";
@@ -25,11 +24,14 @@
       open = "xdg-open";
       space = "ncdu";
       man = "BAT_THEME='default' batman";
-
+      ls = "lsd";
       l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
-
+      spf = "superfile";
+      nano = "nvim";
+      n = "nvim .";
+      rm = "trash";
       # Nixos
       cns = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
 
@@ -46,6 +48,9 @@
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";
+      # tailscale
+      tsu = "sudo tailscale up --accept-routes";
+      tsd = "sudo tailscale down";
     };
   };
 }

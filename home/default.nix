@@ -7,17 +7,14 @@
     ./git.nix
     ./neovim.nix
     ./packages.nix
-    ./starship.nix
+    ./startship.nix
     ./zoxide.nix
     ./zsh
     ./browser.nix # firefox based browser
-    # ./btop.nix # resouces monitor 
     ./cava.nix # audio visualizer
     # ./discord/discord.nix # discord with gruvbox
     # ./fastfetch.nix # fetch tool
     ./fzf.nix # fuzzy finder
-    # ./ghostty.nix # terminal
-    #    ./git.nix # version control
     #    ./gnome.nix # gnome apps
     ./fonts.nix # gtk theme
     # ./hyprland # window manager
@@ -25,7 +22,7 @@
     #    ./lazygit.nix
     #    ./nemo.nix # file manager
     # ./obsidian.nix
-    ./p10k/p10k.nix
+    # ./p10k/p10k.nix
     #    ./rofi.nix # launcher
     #    ./scripts/scripts.nix # personal scripts
     #    ./spicetify.nix # spotify client

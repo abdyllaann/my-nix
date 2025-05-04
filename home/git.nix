@@ -29,7 +29,6 @@
   programs.zsh.shellAliases = {
     g = "lazygit";
     gf = "onefetch --number-of-file-churns 0 --no-color-palette";
-    ga = "git add";
     gaa = "git add --all";
     gs = "git status";
     gb = "git branch";
@@ -42,6 +41,8 @@
     gpst = "git push --follow-tags";
     gcl = "git clone";
     gc = "git commit";
+    gca = "git commit --amend -m";
+    ga = "git add .";
     gcm = "git commit -m";
     gcma = "git add --all && git commit -m";
     gtag = "git tag -ma";

@@ -4,8 +4,8 @@
     ./environment.nix
     ./kernel.nix
     ./sound.nix
-    ./wayland.nix
-    ./xserver.nix
+    # ./wayland.nix
+    # ./xserver.nix
     ./flatpak.nix
     ./program.nix
     ./virtualization.nix

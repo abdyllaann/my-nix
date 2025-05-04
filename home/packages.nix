@@ -25,7 +25,8 @@
     xxd
     woomer
     yt-dlp-light
-
+    eza
+    btop
     ## Development Tools
     gcc
     gdb
@@ -61,13 +62,7 @@
     ## Android / Mobile Dev
     android-tools
     scrcpy
-
-
-    ## Networking / Remote Access
-    teamviewer
-
     ## GUI Apps
-    alacritty
     telegram-desktop
     zapzap
     brave
@@ -75,10 +70,9 @@
     mpv
     filezilla
     libreoffice
-    mission-center
     obs-studio
-    vlc
-
+    viewnior
+    winbox4
     ## Printer Support
     cups
     gutenprint
