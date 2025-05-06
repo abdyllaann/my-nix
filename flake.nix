@@ -56,7 +56,7 @@
       nixosConfigurations.abdyllaan = nixpkgs.lib.nixosSystem {
         inherit system;
 
-        modules = [ ./configuration.nix ];
+        modules = [ ./hosts ];
         specialArgs = {
           host = "killua";
           inherit self inputs username;

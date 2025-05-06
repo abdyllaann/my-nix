@@ -140,9 +140,9 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, ghostty"
-        "ALT, Return, exec, [float; size 1111 700] ghostty"
-        "$mainMod SHIFT, Return, exec, [fullscreen] ghostty"
+        "$mainMod, Return, exec, kitty"
+        "ALT, Return, exec, [float; size 1111 700] kitty"
+        "$mainMod SHIFT, Return, exec, [fullscreen] kitty"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] zen-beta'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
@@ -159,7 +159,7 @@
         "$mainMod, T, exec, toggle_oppacity"
         "$mainMod, E, exec, nemo"
         "ALT, E, exec, hyprctl dispatch exec '[float; size 1111 700] nemo'"
-        "$mainMod SHIFT, E, exec, hyprctl dispatch exec '[float; size 1111 700] ghostty -e yazi'"
+        "$mainMod SHIFT, E, exec, hyprctl dispatch exec '[float; size 1111 700] kitty -e yazi'"
         "$mainMod SHIFT, B, exec, toggle_waybar"
         "$mainMod, C ,exec, hyprpicker -a"
         "$mainMod, W,exec, wallpaper-picker"
@@ -263,14 +263,14 @@
         "$mainMod, V, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;} listview {columns: 1;}' | cliphist decode | wl-copy"
       ];
 
-      # # binds active in lockscreen
-      # bindl = [
-      #   # laptop brigthness
-      #   ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
-      #   ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-      #   "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
-      #   "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
-      # ];
+      # binds active in lockscreen
+      bindl = [
+        # laptop brigthness
+        ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+        "$mainMod, XF86MonBrightnessUp, exec, brightnessctl set 100%+"
+        "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
+      ];
 
       # # binds that repeat when held
       # binde = [
@@ -376,11 +376,13 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
 
-      xwayland {
-        force_zero_scaling = true
-      }
-    ";
+      monitor=eDP-1,1920x1080@60,0x0,1
+      monitor=HDMI-A-1,1920x1080@60,1920x0,1
+
+            xwayland {
+              force_zero_scaling = true
+            }
+          ";
   };
 }

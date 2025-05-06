@@ -98,9 +98,13 @@
         "label": "  ",
         "position": "left",
         "actions": [
-          {
+           {
             "label": "  Lock",
             "command": "swaylock"
+          },
+          {
+            "label": "  LogOut",
+            "command": "logout"
           },
           {
             "label": "  Reboot",

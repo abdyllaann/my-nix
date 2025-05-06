@@ -1,17 +1,17 @@
 { pkgs, config, ... }:
 {
   imports = [
-    # ./environment.nix
     ./kernel.nix
     ./sound.nix
-    # ./wayland.nix
-    # ./xserver.nix
+    ./wayland.nix
+    ./xserver.nix
     ./flatpak.nix
     ./program.nix
     ./virtualization.nix
     ./packages.nix
-    # ./nh.nix
-    ./cachix.nix
+    ./nh.nix
+    ./system.nix
+    # ./cachix.nix
     ./user.nix
     ./cosmic.nix
     ./networking.nix

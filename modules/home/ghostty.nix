@@ -12,7 +12,7 @@ in
   xdg.configFile."ghostty/config".text = ''
     # Font
     font-family = "Maple Mono"
-    font-size = ${if (host == "abdyllaan") then "12" else "14"}
+    font-size = 12
     font-feature = calt
     font-feature = ss03
 
@@ -20,7 +20,7 @@ in
     selection-invert-fg-bg = true
 
     # Theme
-    theme = "everblue"
+    theme = "everblush"
     background-opacity = 0.66
 
     cursor-style = bar

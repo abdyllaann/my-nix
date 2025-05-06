@@ -27,6 +27,7 @@
     yt-dlp-light
     eza
     btop
+    superfile
     ## Development Tools
     gcc
     gdb
@@ -69,6 +70,7 @@
     github-desktop
     mpv
     filezilla
+    blueman
 
     obs-studio
     viewnior

@@ -41,6 +41,7 @@ in
       "pulseaudio"
       "network"
       "battery"
+      "bluetooth"
       "hyprland/language"
       "custom/notification"
     ];
@@ -140,6 +141,18 @@ in
       tooltip = true;
       tooltip-format = "{time}";
     };
+    bluetooth = {
+      format = " {status}";
+      tooltip = true;
+      on-click = "bluetoothd";
+      format-connected = " {device_alias}";
+      format-connected-battery = " {device_alias} {device_battery_percentage}%";
+      tooltip-format = "{controller_alias} ({controller_address})";
+      tooltip-format-connected = "{controller_alias} ({controller_address})\n\n{device_enumerate}";
+      tooltip-format-enumerate-connected = "{device_alias} ({device_address})";
+      tooltip-format-enumerate-connected-battery = "{device_alias} ({device_address}) {device_battery_percentage}%";
+    };
+
     "hyprland/language" = {
       format = "<span foreground='#FABD2F'> </span> {}";
       format-en = "US";

@@ -18,6 +18,8 @@ let
     orange_bright = "#FE8019";
     opacity = "1";
     indicator_height = "2px";
+
+
   };
 in
 {
@@ -34,7 +36,7 @@ in
     }
 
     window#waybar {
-      background: #282828;
+      background: #141b1e;
       border-top: 1px solid #928374;
     }
 
@@ -80,7 +82,7 @@ in
       padding: 1px;
     }
 
-    #pulseaudio, #network, #cpu, #memory, #disk, #battery, #language, #custom-notification {
+    #pulseaudio, #network, #bluetooth, #cpu, #memory, #disk, #battery, #language, #custom-notification {
       padding-left: 5px;
       padding-right: 5px;
       margin-right: 10px;
