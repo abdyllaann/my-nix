@@ -8,6 +8,8 @@
       "8.8.4.4"
       "1.1.1.1"
     ];
+    firewall.allowedTCPPorts = [ 21115 21116 21117 21118 21119 ];
+    firewall.allowedUDPPorts = [ 21116 21117 21118 21119 ];
     # firewall = {
     #   enable = true;
     #   allowedTCPPorts = [

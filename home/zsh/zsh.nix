@@ -116,6 +116,7 @@
       DISABLE_AUTO_UPDATE=true
       DISABLE_MAGIC_FUNCTIONS=true
       export "MICRO_TRUECOLOR=1"
+      export PATH="/usr/local/bin:$PATH"
 
       setopt sharehistory
       setopt hist_ignore_space
@@ -166,7 +167,6 @@
         zle -N zle-line-init
         zle -N zle-line-finish
       fi
-          eval "$(starship init zsh)"
 
     '';
   };

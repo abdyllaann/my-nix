@@ -69,15 +69,18 @@
     github-desktop
     mpv
     filezilla
-    libreoffice
+
     obs-studio
     viewnior
     winbox4
+    # nautilus
+    # nautilus-open-any-terminal
+    neovim-unwrapped
     ## Printer Support
     cups
-    gutenprint
-    epson-escpr
-    epson_201207w
+    # gutenprint
+    # epson-escpr
+    # epson_201207w
     # epson-201401w
 
     ## System Tools
@@ -87,6 +90,9 @@
     libnotify
     libsForQt5.kcalc
     xorg.xdm
+    dconf
+    #samba-utils
+
 
     ## Formatter (from input)
     #    inputs.alejandra.defaultPackage.${system}

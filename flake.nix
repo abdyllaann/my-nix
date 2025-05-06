@@ -3,24 +3,46 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # Lebih eksplisit
+    nur.url = "github:nix-community/NUR";
+    hypr-contrib.url = "github:hyprwm/contrib";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
+
+    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+
+    nix-gaming.url = "github:fufexan/nix-gaming";
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+
+    spicetify-nix = {
+      url = "github:gerg-l/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
+
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
-    nur.url = "github:nix-community/NUR";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hypr-contrib.url = "github:hyprwm/contrib";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
+    zig.url = "github:mitchellh/zig-overlay";
+
+    nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       username = "abdyllaan";
       system = "x86_64-linux";

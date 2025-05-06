@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 {
   imports = [
-    ./environment.nix
+    # ./environment.nix
     ./kernel.nix
     ./sound.nix
     # ./wayland.nix
@@ -9,11 +9,13 @@
     ./flatpak.nix
     ./program.nix
     ./virtualization.nix
+    ./packages.nix
     # ./nh.nix
     ./cachix.nix
     ./user.nix
     ./cosmic.nix
     ./networking.nix
+    ./bootloader.nix
   ];
 
 

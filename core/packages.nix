@@ -6,6 +6,8 @@
   # install package
   environment.systemPackages = with pkgs; [
     nextcloud-client
+    # libreoffice
+    onlyoffice-desktopeditors
     python3
     tailscale
     android-studio
@@ -18,6 +20,9 @@
     luarocks
     rustc
     cargo
+    cifs-utils
+    gvfs
+    samba
   ];
 
   # # install docker

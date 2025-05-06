@@ -3,6 +3,7 @@
     enable = true;
     enableFishIntegration = true;
     enableBashIntegration = true;
+    enableZshIntegration = true;
     settings = builtins.fromTOML (builtins.readFile ./.dotfiles/startship/startship.toml);
     # settings = {
     #   # builtins.fromTOML (builtins.readFile ./.dotfiles/startship/startship.toml);

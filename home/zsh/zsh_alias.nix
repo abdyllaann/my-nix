@@ -33,7 +33,7 @@
       n = "nvim .";
       rm = "trash";
       # Nixos
-      cns = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
+      nix-u = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
 
       cdnix = "cd ~/nixos-config && codium ~/nixos-config";
       ns = "nom-shell --run zsh";

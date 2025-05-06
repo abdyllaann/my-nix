@@ -9,10 +9,7 @@
     ];
 
   powerManagement.cpuFreqGovernor = "performance";
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  time.timeZone = "Asia/Jakarta";
+
   # clock24h = true;
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -28,7 +25,7 @@
     layout = "us";
     variant = "";
   };
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
 
   # # Enable CUPS to print documents.
   # services.printing.enable = true;

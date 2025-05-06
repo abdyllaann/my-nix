@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
-  home.packages = (with pkgs; [ nemo ]);
+  home.packages = (with pkgs; [
+    nemo
+  ]);
 
   dconf.settings = {
     "org/nemo/preferences" = {
@@ -13,10 +15,10 @@
       quick-renames-with-pause-in-between = true;
       show-edit-icon-toolbar = false;
       show-full-path-titles = false;
-      show-hidden-files = true;
+      show-hidden-files = false;
       show-home-icon-toolbar = true;
       show-new-folder-icon-toolbar = true;
-      show-open-in-terminal-toolbar = false;
+      show-open-in-terminal-toolbar = true;
       show-search-icon-toolbar = false;
       show-show-thumbnails-toolbar = false;
       thumbnail-limit = 10485760;
@@ -24,7 +26,7 @@
     "org/nemo/preferences/menu-config" = {
       background-menu-open-as-root = false;
       selection-menu-open-as-root = false;
-      selection-menu-open-in-terminal = false;
+      selection-menu-open-in-terminal = true;
       selection-menu-scripts = false;
     };
     "org/nemo/search" = {
