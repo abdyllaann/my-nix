@@ -89,9 +89,10 @@
     libsForQt5.kcalc
     xorg.xdm
     dconf
-    #samba-utils
 
-
+    #game
+    pcsx2
+    lutris
     ## Formatter (from input)
     #    inputs.alejandra.defaultPackage.${system}
   ];
