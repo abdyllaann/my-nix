@@ -13,7 +13,7 @@
     ./system.nix
     # ./cachix.nix
     ./user.nix
-    ./cosmic.nix
+    ./de.nix
     ./networking.nix
     ./bootloader.nix
   ];

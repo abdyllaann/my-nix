@@ -15,12 +15,12 @@
     ./discord/discord.nix # discord with gruvbox
     # ./fastfetch.nix # fetch tool
     ./fzf.nix # fuzzy finder
-    ./gnome.nix # gnome apps
+    # ./gnome.nix # gnome apps
     ./gtk.nix # gtk apps
     ./fonts.nix # gtk theme
     ./hyprland # window manager
     ./kitty.nix # terminal
-    # ./nautilus.nix
+    ./nautilus.nix
     ./office.nix # browser
     #    ./lazygit.nix
     ./nemo.nix # file manager

@@ -14,9 +14,7 @@
     unzip
     bottom
     nitch
-    toipe
     ttyper
-    cbonsai
     cmatrix
     sl
     wavemon
@@ -67,7 +65,6 @@
     telegram-desktop
     zapzap
     brave
-    github-desktop
     mpv
     filezilla
     blueman
@@ -77,7 +74,6 @@
     winbox4
     # nautilus
     # nautilus-open-any-terminal
-    neovim-unwrapped
     ## Printer Support
     cups
     # gutenprint
