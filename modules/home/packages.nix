@@ -92,7 +92,11 @@
 
     #game
     pcsx2
-    lutris
+    # lutris
+    # wine
+    # winetricks
+    # protontricks
+
     ## Formatter (from input)
     #    inputs.alejandra.defaultPackage.${system}
   ];

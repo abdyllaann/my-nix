@@ -3,16 +3,16 @@ with lib;
 let
   defaultApps = {
     browser = [ "zen-beta.desktop" ];
-    text = [ "org.gnome.TextEditor.desktop" ];
-    image = [ "imv-dir.desktop" ];
-    audio = [ "mpv.desktop" ];
-    video = [ "mpv.desktop" ];
-    directory = [ "nemo.desktop" ];
-    office = [ "libreoffice.desktop" ];
-    pdf = [ "org.gnome.Evince.desktop" ];
-    terminal = [ "ghostty.desktop" ];
-    archive = [ "org.gnome.FileRoller.desktop" ];
-    discord = [ "webcord.desktop" ];
+    # text = [ "org.gnome.TextEditor.desktop" ];
+    # image = [ "imv-dir.desktop" ];
+    # audio = [ "mpv.desktop" ];
+    # video = [ "mpv.desktop" ];
+    # directory = [ "nemo.desktop" ];
+    # office = [ "libreoffice.desktop" ];
+    # pdf = [ "org.gnome.Evince.desktop" ];
+    # terminal = [ "ghostty.desktop" ];
+    # archive = [ "org.gnome.FileRoller.desktop" ];
+    # discord = [ "webcord.desktop" ];
   };
 
   mimeMap = {
@@ -93,6 +93,7 @@ in
 {
   xdg.configFile."mimeapps.list".force = true;
   xdg.mimeApps.enable = true;
+
   xdg.mimeApps.associations.added = associations;
   xdg.mimeApps.defaultApplications = associations;
 

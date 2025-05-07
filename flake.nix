@@ -1,8 +1,8 @@
 {
-  description = "One flake to rule them all";
+  description = "my flakes";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # Lebih eksplisit
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
@@ -61,26 +61,6 @@
           host = "killua";
           inherit self inputs username;
         };
-        # modules = [
-        #   ./configuration.nix
-        #
-        #   # Integrasi Home Manager sebagai module NixOS
-        #   home-manager.nixosModules.home-manager
-        #
-        #   # Konfigurasi spesifik untuk Home Manager
-        #   {
-        #     home-manager.useGlobalPkgs = true;
-        #     home-manager.useUserPackages = true;
-        #     home-manager.users.abdyllaan = import ./home.nix;
-        #
-        #     # Kirim semua inputs ke konfigurasi agar bisa digunakan di home.nix
-        #     _module.args.inputs = inputs;
-        #   }
-        # ];
-        # specialArgs = {
-        #   host = "killua";
-        #   inherit self inputs username;
-        # };
       };
     };
 }
