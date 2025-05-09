@@ -3,11 +3,11 @@
   programs.kitty = {
     enable = true;
 
-    themeFile = "gruvbox-dark-hard";
+    themeFile = "Batman";
 
     font = {
       name = "Maple Mono";
-      size = 10;
+      size = 12;
     };
 
     extraConfig = ''
@@ -18,12 +18,14 @@
     '';
 
     settings = {
+      hide_window_decorations = true;
       confirm_os_window_close = 0;
-      background_opacity = "0.66";
+      background_opacity = 0.65;
+      background_blur = 30;
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
-      window_padding = 2;
+      window_padding = 4;
 
       ## Tabs
       tab_title_template = "{index}";

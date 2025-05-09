@@ -144,7 +144,7 @@ in
     bluetooth = {
       format = " {status}";
       tooltip = true;
-      on-click = "bluetoothd";
+      on-click = "bluez";
       format-connected = " {device_alias}";
       format-connected-battery = " {device_alias} {device_battery_percentage}%";
       tooltip-format = "{controller_alias} ({controller_address})";

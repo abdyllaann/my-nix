@@ -12,6 +12,7 @@
     ./nh.nix
     ./system.nix
     # ./cachix.nix
+    # ./xfce.nix
     ./user.nix
     ./de.nix
     ./networking.nix

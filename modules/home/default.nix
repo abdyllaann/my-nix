@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./sway
     ./bat.nix
     ./fish.nix
     ./git.nix
@@ -15,7 +16,7 @@
     ./discord/discord.nix # discord with gruvbox
     ./fastfetch.nix # fetch tool
     ./fzf.nix # fuzzy finder
-    ./gtk.nix # gtk apps
+    # ./gtk.nix # gtk apps
     ./fonts.nix # gtk theme
     ./hyprland # window manager
     ./kitty.nix # terminal

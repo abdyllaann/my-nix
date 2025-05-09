@@ -68,6 +68,7 @@
     mpv
     filezilla
     blueman
+    kdePackages.okular
 
     obs-studio
     viewnior

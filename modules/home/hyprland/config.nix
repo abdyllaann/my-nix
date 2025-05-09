@@ -143,7 +143,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, [float; size 1111 700] kitty"
         "$mainMod SHIFT, Return, exec, [fullscreen] kitty"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] zen-beta'"
+        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] brave'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"

@@ -25,6 +25,11 @@
     samba
   ];
 
+  environment.plasma6.excludePackages = with pkgs; [
+    kdePackages.konsole
+    kdePackages.kate
+    xterm
+  ];
   # # install docker
   # virtualisation.docker.enable = true;
   # users.extraGroups.docker.members = [ "abdyllaan" ];
