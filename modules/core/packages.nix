@@ -30,6 +30,8 @@
     kdePackages.kate
     xterm
   ];
+
+  services.xserver.excludePackages = [ pkgs.xterm ];
   # # install docker
   # virtualisation.docker.enable = true;
   # users.extraGroups.docker.members = [ "abdyllaan" ];

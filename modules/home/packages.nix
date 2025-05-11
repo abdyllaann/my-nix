@@ -26,6 +26,7 @@
     eza
     btop
     superfile
+    microfetch
     ## Development Tools
     gcc
     gdb
@@ -67,7 +68,7 @@
     brave
     mpv
     filezilla
-    blueman
+    # blueman
     kdePackages.okular
 
     obs-studio
