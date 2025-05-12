@@ -9,7 +9,10 @@
       name = "Maple Mono";
       size = 12;
     };
-
+    environment = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
     extraConfig = ''
       font_features MapleMono-Regular +ss01 +ss02 +ss04
       font_features MapleMono-Bold +ss01 +ss02 +ss04
