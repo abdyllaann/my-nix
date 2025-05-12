@@ -6,7 +6,6 @@
     fd
     ripgrep
     lsd
-    neofetch
     tty-clock
     tree
     trash-cli
@@ -20,13 +19,13 @@
     wavemon
     wl-clipboard
     xdg-utils
-    xxd
     woomer
     yt-dlp-light
     eza
     btop
     superfile
     microfetch
+    tlrc
     ## Development Tools
     gcc
     gdb
@@ -72,7 +71,6 @@
     kdePackages.okular
 
     obs-studio
-    viewnior
     winbox4
     # nautilus
     # nautilus-open-any-terminal

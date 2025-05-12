@@ -3,12 +3,12 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
-    package = pkgs.yazi-unwrapped;
+    # package = pkgs.yazi-unwrapped;
 
     settings = {
       manager = {
         linemode = "size";
-        show_hidden = true;
+        show_hidden = false;
         show_symlink = true;
         sort_by = "natural";
         sort_dir_first = true;

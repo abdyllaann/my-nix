@@ -20,10 +20,9 @@
     ./fonts.nix # gtk theme
     ./hyprland # window manager
     ./kitty.nix # terminal
-    ./nautilus.nix
+    ./ghostty.nix # terminal
     ./office.nix # browser
     ./lazygit.nix
-    ./nemo.nix # file manager
     ./obsidian.nix
     ./rofi.nix # launcher
     ./scripts/scripts.nix # personal scripts

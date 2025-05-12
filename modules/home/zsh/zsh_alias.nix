@@ -51,6 +51,11 @@
       # tailscale
       tsu = "sudo tailscale up --accept-routes";
       tsd = "sudo tailscale down";
+
+      tm = "tmux attach || tmux new";
+      tmks = "tmux kill-session -t";
+      tmns = "tmux new-session -s";
+
     };
   };
 }

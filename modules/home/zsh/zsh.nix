@@ -25,6 +25,7 @@
     ];
 
     completionInit = ''
+      export EDITOR=nvim
       # Load Zsh modules
       # zmodload zsh/zle
       # zmodload zsh/zpty
@@ -110,9 +111,11 @@
       # if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
       #   source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
       # fi
-      if command -v tmux >/dev/null; then
-        [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ] && exec tmux
-      fi
+      # if command -v tmux >/dev/null; then
+      #   [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ] && exec tmux
+      # fi
+      #
+
       DISABLE_AUTO_UPDATE=true
       DISABLE_MAGIC_FUNCTIONS=true
       export "MICRO_TRUECOLOR=1"
