@@ -36,7 +36,7 @@
     go
     gopls
     delve
-    tmux
+    # tmux
     devbox
 
     ## Python

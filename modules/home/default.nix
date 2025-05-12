@@ -24,6 +24,7 @@
     ./office.nix # browser
     ./lazygit.nix
     ./obsidian.nix
+    ./tmux.nix
     ./rofi.nix # launcher
     ./scripts/scripts.nix # personal scripts
     ./spicetify.nix # spotify client
