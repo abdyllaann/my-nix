@@ -23,16 +23,17 @@
     ./ghostty.nix # terminal
     ./office.nix # browser
     ./lazygit.nix
-    ./obsidian.nix
-    ./tmux.nix
-    ./rofi.nix # launcher
-    ./scripts/scripts.nix # personal scripts
+    # ./obsidian.nix
+    # ./tmux.nix
+    # ./rofi.nix # launcher
+    ./rofi-everblush.nix # launcher
+    # ./scripts/scripts.nix # personal scripts
     ./spicetify.nix # spotify client
-    ./swaylock.nix # lock screen
-    ./swayosd.nix # brightness / volume wiget
-    ./swaync/swaync.nix # notification deamon
-    ./waybar # status bar
-    ./waypaper.nix # GUI wallpaper picker
+    # ./swaylock.nix # lock screen
+    # ./swayosd.nix # brightness / volume wiget
+    # ./swaync/swaync.nix # notification deamon
+    # ./waybar # status bar
+    # ./waypaper.nix # GUI wallpaper picker
     # ./xdg-mimes.nix # xdg config
     ./yazi.nix # terminal file manager
   ];
