@@ -21,6 +21,7 @@
     cifs-utils
     gvfs
     samba
+    kdePackages.kscreen
   ];
 
   environment.plasma6.excludePackages = with pkgs; [

@@ -115,6 +115,9 @@
       #   [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ] && exec tmux
       # fi
       #
+      if [ "$TERM" = "xterm-kitty" ]; then
+        export TERM=xterm-256color
+      fi
 
       DISABLE_AUTO_UPDATE=true
       DISABLE_MAGIC_FUNCTIONS=true

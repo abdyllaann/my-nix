@@ -11,7 +11,7 @@
 
     nix-gaming.url = "github:fufexan/nix-gaming";
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -32,9 +32,9 @@
       flake = false;
     };
 
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
+    # ghostty = {
+    #   url = "github:ghostty-org/ghostty";
+    # };
 
     zig.url = "github:mitchellh/zig-overlay";
 
@@ -53,7 +53,7 @@
       lib = nixpkgs.lib;
     in
     {
-      nixosConfigurations.abdyllaan = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.killua = nixpkgs.lib.nixosSystem {
         inherit system;
 
         modules = [ ./hosts ];

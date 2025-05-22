@@ -14,12 +14,9 @@
     bottom
     nitch
     ttyper
-    cmatrix
-    sl
     wavemon
     wl-clipboard
     xdg-utils
-    woomer
     yt-dlp-light
     eza
     btop
@@ -29,23 +26,25 @@
     ## Development Tools
     gcc
     gdb
+    gh
     cmake
     gnumake
-    nodejs_23
+    nodejs_24
     yarn
     go
     gopls
     delve
     tmux
     devbox
-
+    dig
+    pnpm
     ## Python
     python3
     python-launcher
     python312Packages.ipython
 
     ## Java
-    jre
+    # jre
 
     ## PHP / Laravel
     php84
@@ -68,7 +67,6 @@
     mpv
     filezilla
     # blueman
-    kdePackages.okular
 
     obs-studio
     winbox4
@@ -82,12 +80,10 @@
     # epson-201401w
 
     ## System Tools
-    fuse
-    appimage-run
+    # appimage-run
     nordic
     libnotify
     libsForQt5.kcalc
-    xorg.xdm
     dconf
 
     #game

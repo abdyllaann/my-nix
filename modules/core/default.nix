@@ -3,7 +3,7 @@
   imports = [
     ./kernel.nix
     ./sound.nix
-    ./wayland.nix
+    # ./wayland.nix
     ./xserver.nix
     ./flatpak.nix
     ./program.nix

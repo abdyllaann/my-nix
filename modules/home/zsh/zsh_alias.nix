@@ -32,10 +32,11 @@
       nano = "nvim";
       n = "nvim .";
       rm = "trash";
+      help = "tldr";
       # Nixos
       nix-u = "sudo nixos-rebuild switch --flake ~/nix#abdyllaan";
 
-      cdnix = "cd ~/nixos-config && codium ~/nixos-config";
+      # cdnix = "cd ~/nixos-config && codium ~/nixos-config";
       ns = "nom-shell --run zsh";
       nd = "nom develop --command zsh";
       nb = "nom build";
@@ -46,8 +47,8 @@
       nix-test = "nh os test";
 
       # python
-      piv = "python -m venv .venv";
-      psv = "source .venv/bin/activate";
+      # piv = "python -m venv .venv";
+      # psv = "source .venv/bin/activate";
       # tailscale
       tsu = "sudo tailscale up --accept-routes";
       tsd = "sudo tailscale down";
