@@ -36,8 +36,7 @@
     gd = "git diff";
     gpl = "git pull";
     gplo = "git pull origin";
-    gps = "git push";
-    gpso = "git push origin";
+    gp = "git push";
     gpst = "git push --follow-tags";
     gcl = "git clone";
     gc = "git commit";
@@ -46,8 +45,8 @@
     gcm = "git commit -m";
     gcma = "git add --all && git commit -m";
     gtag = "git tag -ma";
-    gch = "git checkout";
-    gchb = "git checkout -b";
+    gco = "git checkout";
+    gcob = "git checkout -b";
     gpo = "git push origin";
     glog = "git log --oneline --decorate --graph";
     glol = "git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'";
