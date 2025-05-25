@@ -23,6 +23,13 @@
     superfile
     microfetch
     tlrc
+    # yazi
+    unrar
+    p7zip
+    unzip
+    gnupg
+    zip
+    xz
     ## Development Tools
     gcc
     gdb

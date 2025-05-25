@@ -17,6 +17,7 @@
     ./de.nix
     ./networking.nix
     ./bootloader.nix
+    # ./fingerprint.nix
   ];
 
 
