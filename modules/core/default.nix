@@ -18,6 +18,7 @@
     ./networking.nix
     ./bootloader.nix
     # ./fingerprint.nix
+    ./sway.nix
   ];
 
 
