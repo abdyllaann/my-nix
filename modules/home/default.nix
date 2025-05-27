@@ -29,9 +29,9 @@
     ./rofi-everblush.nix # launcher
     # ./scripts/scripts.nix # personal scripts
     ./spicetify.nix # spotify client
-    # ./swaylock.nix # lock screen
-    # ./swayosd.nix # brightness / volume wiget
-    # ./swaync/swaync.nix # notification deamon
+    ./swaylock.nix # lock screen
+    ./swayosd.nix # brightness / volume wiget
+    ./swaync/swaync.nix # notification deamon
     ./waybar # status bar
     # ./waypaper.nix # GUI wallpaper picker
     # ./xdg-mimes.nix # xdg config
