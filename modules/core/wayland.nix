@@ -11,9 +11,9 @@
     xdgOpenUsePortal = true;
     config = {
       common.default = [ "gtk" ];
-      hyprland.default = [
+      sway.default = [
         "gtk"
-        "hyprland"
+        "sway"
       ];
     };
 

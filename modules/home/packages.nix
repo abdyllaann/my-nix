@@ -70,10 +70,11 @@
     ## GUI Apps
     telegram-desktop
     zapzap
-    brave
+    # brave
     mpv
     filezilla
     # blueman
+    nemo-with-extensions
 
     obs-studio
     winbox4

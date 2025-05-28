@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ rofi-wayland ];
+  home.packages = with pkgs; [
+  rofi-power-menu
+  rofi-wayland
+  ];
 
   xdg.configFile."rofi/theme.rasi".text = ''
     * {
@@ -125,5 +128,14 @@
       text-color: @green;
     }
   '';
+
+    # Tambahkan script power menu
+  home.file.".local/bin/powermenu".text = ''
+    #!/usr/bin/env bash
+    export ROFI_COMMAND=rofi-wayland
+    rofi-power-menu --theme ~/.config/rofi/theme.rasi
+  '';
+  home.file.".local/bin/powermenu".executable = true;
 }
+
 

@@ -21,14 +21,16 @@
     cifs-utils
     gvfs
     samba
-    kdePackages.kscreen
+    gnome-keyring
+        libsecret
+    seahorse # opsional, GUI
   ];
 
-  environment.plasma6.excludePackages = with pkgs; [
-    kdePackages.konsole
-    kdePackages.kate
-    xterm
-  ];
+  # environment.plasma6.excludePackages = with pkgs; [
+  #   kdePackages.konsole
+  #   kdePackages.kate
+  #   xterm
+  # ];
 
   services.xserver.excludePackages = [ pkgs.xterm ];
   # # install docker

@@ -23,14 +23,14 @@ in
   programs.waybar.settings.mainBar = with custom; {
     position = "top";
     layer = "top";
-    height = 24;
+    height = 28;
     margin-top = 0;
-    margin-bottom = 0;
+    margin-bottom = 2;
     margin-left = 0;
     margin-right = 0;
     modules-left = [
       "custom/launcher"
-      "hyprland/workspaces"
+      "sway/workspaces"
       "tray"
     ];
     modules-center = [ "clock" ];
@@ -42,7 +42,6 @@ in
       "network"
       "battery"
       "bluetooth"
-      "hyprland/language"
       "custom/notification"
     ];
     clock = {
@@ -56,7 +55,7 @@ in
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       format-alt = "  {:%d/%m}";
     };
-    "hyprland/workspaces" = {
+    "sway/workspaces" = {
       active-only = false;
       disable-scroll = true;
       format = "{icon}";
@@ -153,10 +152,10 @@ in
       tooltip-format-enumerate-connected-battery = "{device_alias} ({device_address}) {device_battery_percentage}%";
     };
 
-    "hyprland/language" = {
-      format = "<span foreground='#FABD2F'> </span> {}";
-      format-en = "US";
-    };
+    # "hyprland/language" = {
+    #   format = "<span foreground='#FABD2F'> </span> {}";
+    #   format-en = "US";
+    # };
     "custom/launcher" = {
       format = "";
       on-click = "random-wallpaper";

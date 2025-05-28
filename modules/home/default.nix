@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # ./sway
+    ./sway
     ./bat.nix
     ./fish.nix
     ./git.nix
@@ -33,8 +33,9 @@
     ./swayosd.nix # brightness / volume wiget
     ./swaync/swaync.nix # notification deamon
     ./waybar # status bar
-    # ./waypaper.nix # GUI wallpaper picker
+    ./waypaper.nix # GUI wallpaper picker
     # ./xdg-mimes.nix # xdg config
     ./yazi.nix # terminal file manager
+    ./hyprlock.nix
   ];
 }
