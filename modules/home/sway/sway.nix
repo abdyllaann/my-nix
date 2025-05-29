@@ -17,7 +17,7 @@
         # smartGaps = true;
       };
       window = {
-        border = 3;
+        border = 4;
         titlebar = false;
       };
       floating = {
@@ -29,11 +29,11 @@
       };
       colors = {
         focused = {
-          border = "#928374";
+          border = "#CD5656";
           background = "#282828";
           text = "#FBF1C7";
           indicator = "#D65D0E";
-          childBorder = "#928374";
+          childBorder = "#CD5656";
         };
         unfocused = {
           border = "#1D2021";
@@ -43,7 +43,7 @@
           childBorder = "#1D2021";
         };
         urgent = {
-          border = "#CC241D";
+          border = "#CD5656";
           background = "#CC241D";
           text = "#FBF1C7";
           indicator = "#CC241D";
@@ -56,7 +56,8 @@
         "${mod}+Return" = "exec kitty";
         "${mod}+d" = "exec rofi -show drun";
         "${mod}+b" = "exec zen";
-        "${mod}+y" = "exec yazi";
+        "${mod}+e" = "exec nautilus";
+        "${mod}+y" = "exec kitty -e yazi";
         "${mod}+z" = "exec zapzap";
         "${mod}+Shift+q" = "exec rofi -show run";
         "${mod}+q" = "kill";
@@ -81,9 +82,9 @@
         "${mod}+Shift+Right" = "move right";
         "${mod}+Shift+v" = "splith";
         "${mod}+v" = "splitv";
-        "${mod}+s" = "layout stacking";
+        # "${mod}+s" = "layout stacking";
         "${mod}+w" = "layout tabbed";
-        "${mod}+e" = "layout toggle split";
+        "${mod}+s" = "layout toggle split";
         "${mod}+f" = "fullscreen";
         "${mod}+Shift+space" = "floating toggle";
         "${mod}+space" = "focus mode_toggle";

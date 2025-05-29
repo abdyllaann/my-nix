@@ -74,12 +74,11 @@
     mpv
     filezilla
     # blueman
-    nemo-with-extensions
-
+    # nemo-with-extensions
+ 
     obs-studio
     winbox4
-    # nautilus
-    # nautilus-open-any-terminal
+   
     ## Printer Support
     cups
     # gutenprint

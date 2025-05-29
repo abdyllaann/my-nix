@@ -6,11 +6,13 @@
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 14px;
     min-height: 0;
+    margin-bottom: 3px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(0, 0, 0, 0); /* 0 = full transparan */
+    /* background-color: rgba(43, 48, 59, 0.5); */
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -57,25 +59,42 @@ button:hover {
     background-color: #a37800;
 }
 
+/* #workspaces button { */
+/*     padding: 0 5px; */
+/*     background-color: transparent; */
+/*     color: #ffffff; */
+/* } */
+/**/
+/* #workspaces button:hover { */
+/*     background: rgba(0, 0, 0, 0.2); */
+/* } */
+/**/
+/* #workspaces button.focused { */
+/*     background-color: #64727D; */
+/*     box-shadow: inset 0 -3px #ffffff; */
+/* } */
+/**/
+/* #workspaces button.urgent { */
+/*     background-color: #eb4d4b; */
+/* } */
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  margin: 2px 4px;
+  background-color: transparent;
+  color: #888;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+  background-color: #5294e2;
+  color: white;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
+  color: white;
 }
-
 #mode {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
@@ -130,7 +149,8 @@ button:hover {
     /* border-radius: 6px; */
     transition: none;
     color: #ffffff;
-    background: #141b1e;
+    font-weight: bold;
+    background: #CD5656;
 }
 #battery {
     background-color: #141b1e;
@@ -256,7 +276,7 @@ label:focus {
 }
 
 #tray {
-    margin-left: 8px;
+    margin-right: 8px;
     background-color: #141b1e;
 }
 

@@ -23,9 +23,12 @@
     samba
     gnome-keyring
         libsecret
+    nautilus
+    nautilus-open-any-terminal
     seahorse # opsional, GUI
   ];
-
+  services.gvfs.enable = true;
+  services.dbus.enable = true;
   # environment.plasma6.excludePackages = with pkgs; [
   #   kdePackages.konsole
   #   kdePackages.kate

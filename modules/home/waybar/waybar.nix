@@ -27,7 +27,8 @@ let
       mainBar = with custom;{
         height = 30;
         spacing = 4;
-
+        position = "bottom";
+        layer = "top";
         modules-left = [
           "sway/mode"
           "clock"
@@ -80,6 +81,21 @@ let
           tooltip = true;
           tooltip-format = "{app}: {title}";
         };
+       "sway/workspaces" = {
+          "disable-scroll" = true;
+          "format" = "{icon}";
+          "format-icons" = {
+          "1" = "";
+          "2" = "";
+          "3" = "";
+          "4" = "";
+          "5" = "";
+          "urgent" = "";
+          "focused" = "";
+          "default" = "";
+         };
+          "on-click" = "swaymsg workspace number {id}";
+        };
 
         "mpd" = {
           format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ";
@@ -121,7 +137,7 @@ let
           # tooltip-format = "<big>it's {:%Y %B} | {:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>";
           # format-alt = "it's {}";
           "interval" = 1;
-          "format" = "It's {:%A %d %b %H:%M:%S}";
+          "format" = "It's {:%A, %d %b %H:%M:%S}";
         };
         bluetooth = {
           format = " {status}";
