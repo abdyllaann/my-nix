@@ -10,7 +10,7 @@
       modifier = "Mod4";
       terminal = "kitty";
       menu = "rofi -show drun";
-      bars = [{ command = "swaybar_command waybar"; }]; 
+      bars = [{ command = "swaybar_command waybar"; }];
       gaps = {
         inner = 5;
         outer = 7;

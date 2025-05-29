@@ -32,6 +32,7 @@
   security.pam.services.swaylock = {
     enableGnomeKeyring = true;
   };
+    services.timesyncd.enable = true;
   time.timeZone = "Asia/Jakarta";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;

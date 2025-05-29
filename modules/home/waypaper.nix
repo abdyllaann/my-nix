@@ -5,15 +5,16 @@
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
     language = en
-    folder = ~/
+    folder = ~/nix/wallpapers/otherWallpaper/gruvbox
+
     monitors = All
-    wallpaper = ~/home/abdyllaan/nix/wallpapers/otherWallpaper/gruvbox
+    wallpaper = ~/nix/wallpapers/otherWallpaper/gruvbox
     backend = swww
     fill = fill
     sort = name
     color = #ffffff
     subfolders = False
-    show_hidden = False
+    show_hidden = True
     show_gifs_only = False
     post_command = pkill .waypaper-wrapp
     number_of_columns = 3
