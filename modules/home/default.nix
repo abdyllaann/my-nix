@@ -27,7 +27,7 @@
     # ./tmux.nix
     # ./rofi.nix # launcher
     ./rofi-everblush.nix # launcher
-    # ./scripts/scripts.nix # personal scripts
+    ./scripts/scripts.nix # personal scripts
     ./spicetify.nix # spotify client
     ./swaylock.nix # lock screen
     ./swayosd.nix # brightness / volume wiget
@@ -36,6 +36,6 @@
     ./waypaper.nix # GUI wallpaper picker
     # ./xdg-mimes.nix # xdg config
     ./yazi.nix # terminal file manager
-    ./hyprlock.nix
+    # ./hyprlock.nix
   ];
 }
