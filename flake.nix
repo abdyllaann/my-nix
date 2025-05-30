@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
-    hypr-contrib.url = "github:hyprwm/contrib";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
+    # hypr-contrib.url = "github:hyprwm/contrib";
+    # hyprpicker.url = "github:hyprwm/hyprpicker";
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 

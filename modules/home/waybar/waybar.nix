@@ -190,7 +190,7 @@ let
         };
         network = {
           format-wifi = " {signalStrength}%";
-          format-ethernet = "󰈀 {ipaddr}";
+          format-ethernet = "󰈀 ";
           format-disconnected = "󰖪 Offline";
           tooltip-format = "{essid} ({signalStrength}%)\nIP: {ipaddr}\nInterface: {ifname}";
           on-click = "kitty -e nmtui";

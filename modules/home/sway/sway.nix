@@ -59,7 +59,7 @@
         "${mod}+e" = "exec nautilus";
         "${mod}+y" = "exec kitty -e yazi";
         "${mod}+z" = "exec zapzap";
-        "${mod}+Shift+q" = "exec rofi -show run";
+        "${mod}+Shift+q" = "exec power-menu";
         "${mod}+q" = "kill";
         "${mod}+Shift+c" = "reload";
         "${mod}+Shift+r" = "restart";
@@ -100,7 +100,7 @@
         "${mod}+7" = "workspace number 7";
         "${mod}+8" = "workspace number 8";
         "${mod}+9" = "workspace number 9";
-        "${mod}+0" = "workspace number 10";
+        "${mod}+0" = "workspace number 1s0";
         "${mod}+Shift+1" = "move container to workspace number 1";
         "${mod}+Shift+2" = "move container to workspace number 2";
         "${mod}+Shift+3" = "move container to workspace number 3";
@@ -112,13 +112,14 @@
         "${mod}+Shift+9" = "move container to workspace number 9";
         "${mod}+Shift+0" = "move container to workspace number 10";
         "${mod}+r" = "mode resize";
+        "${mod}+Shift+s" = "exec screenshot";
+        "${mod}+Shift+p" = "exec toggle_display";
         "--locked XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
         "--locked XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
         "--locked XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
         "--locked XF86AudioMicMute" = "exec pactl set-source-mute @DEFAULT_SOURCE@ toggle";
         "--locked XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
         "--locked XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
-        "Print" = "exec grim";
       };
       modes = {
         resize = {

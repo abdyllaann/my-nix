@@ -4,31 +4,40 @@ dir="$HOME/Pictures/Screenshots"
 time=$(date +'%Y_%m_%d_at_%Hh%Mm%Ss')
 file="${dir}/Screenshot_${time}.png"
 
+if [[ ! -d "$dir" ]]; then
+  mkdir -p "$dir"
+fi
+
 copy() {
-    GRIMBLAST_HIDE_CURSOR=0 grimblast --notify --freeze copy area
+  grim -g "$(slurp)" - | wl-copy
+  notify-send "Screenshot copied to clipboard"
 }
 
 save() {
-    GRIMBLAST_HIDE_CURSOR=0 grimblast --notify --freeze save area "$file"
+  grim -g "$(slurp)" "$file"
+  notify-send "Screenshot saved to $file"
 }
 
 swappy_() {
-    GRIMBLAST_HIDE_CURSOR=0 grimblast --notify --freeze save area "$file"
-    swappy -f "$file"
+  grim -g "$(slurp)" "$file"
+  swappy -f "$file"
 }
 
-if [[ ! -d "$dir" ]]; then
-    mkdir -p "$dir"
-fi
+choice=$(echo -e "Copy\nSave\nEdit (Swappy)" | rofi -dmenu -p "Screenshot Mode:")
 
-if [[ "$1" == "--copy" ]]; then
-    copy
-elif [[ "$1" == "--save" ]]; then
-    save
-elif [[ "$1" == "--swappy" ]]; then
-    swappy_
-else
-    echo -e "Available Options: --copy --save --swappy"
-fi
+case "$choice" in
+Copy)
+  copy
+  ;;
+Save)
+  save
+  ;;
+"Edit (Swappy)")
+  swappy_
+  ;;
+*)
+  notify-send "No valid option selected."
+  ;;
+esac
 
 exit 0

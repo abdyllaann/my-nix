@@ -23,8 +23,11 @@ let
   toggle_waybar = pkgs.writeScriptBin "toggle_waybar" (
     builtins.readFile ./scripts/toggle_waybar.sh
   );
-  toggle_float = pkgs.writeScriptBin "toggle_float" (
+   toggle_float = pkgs.writeScriptBin "toggle_float" (
     builtins.readFile ./scripts/toggle_float.sh
+ );
+   toggle_display = pkgs.writeScriptBin "toggle_display" (
+    builtins.readFile ./scripts/toggle_display.sh
   );
 
   maxfetch = pkgs.writeScriptBin "maxfetch" (
@@ -38,9 +41,7 @@ let
     builtins.readFile ./scripts/extract.sh
   );
 
-  show-keybinds = pkgs.writeScriptBin "show-keybinds" (
-    builtins.readFile ./scripts/keybinds.sh
-  );
+
 
   vm-start = pkgs.writeScriptBin "vm-start" (
     builtins.readFile ./scripts/vm-start.sh
@@ -75,13 +76,13 @@ in
     toggle_oppacity
     toggle_waybar
     toggle_float
+    toggle_display
 
     maxfetch
 
     compress
     extract
 
-    show-keybinds
 
     vm-start
 

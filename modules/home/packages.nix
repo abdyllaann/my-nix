@@ -51,7 +51,7 @@
     python312Packages.ipython
 
     ## Java
-    # jre
+    jre
 
     ## PHP / Laravel
     php84

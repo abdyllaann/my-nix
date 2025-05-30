@@ -5,10 +5,9 @@
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
     language = en
-    folder = ~/nix/wallpapers/otherWallpaper/gruvbox
-
+    folder = ~/nix/wallpapers/
     monitors = All
-    wallpaper = ~/nix/wallpapers/otherWallpaper/gruvbox
+    wallpaper = ~/nix/wallpapers/
     backend = swww
     fill = fill
     sort = name
