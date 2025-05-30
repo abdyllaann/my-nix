@@ -63,6 +63,7 @@
         "${mod}+q" = "kill";
         "${mod}+Shift+c" = "reload";
         "${mod}+Shift+r" = "restart";
+        "${mod}+Shift+x" = "exec random-wallpaper";
         "${mod}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
         "${mod}+h" = "focus left";
         "${mod}+j" = "focus down";
@@ -82,7 +83,6 @@
         "${mod}+Shift+Right" = "move right";
         "${mod}+Shift+v" = "splith";
         "${mod}+v" = "splitv";
-        # "${mod}+s" = "layout stacking";
         "${mod}+w" = "layout tabbed";
         "${mod}+s" = "layout toggle split";
         "${mod}+f" = "fullscreen";

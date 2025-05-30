@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-wallpaper_path="$HOME/nix/wallpapers/"
+wallpaper_path="$HOME/nix/"
 wallpapers_folder="$HOME/nix/wallpapers/"
 
 current_wallpaper=$(readlink "$wallpaper_path/wallpaper" 2>/dev/null)
@@ -17,5 +17,5 @@ while true; do
   fi
 done
 
-ln -sf "$wallpapers_folder/$wallpaper_name" "$wallpaper_path/wallpaper"
-wall-change "$wallpaper_path/wallpaper" &
+ln -sf "$wallpapers_folder/$wallpaper_name" "$wallpaper_path/wallpapers"
+wall-change "$wallpaper_path/wallpapers" &
