@@ -55,6 +55,7 @@
       in {
         "${mod}+Return" = "exec kitty";
         "${mod}+d" = "exec rofi -show drun";
+        "${mod}+o" = "exec rofimoji";
         "${mod}+b" = "exec zen";
         "${mod}+e" = "exec nautilus";
         "${mod}+y" = "exec kitty -e yazi";

@@ -2,6 +2,11 @@
 {
   home.packages = with pkgs; [
   rofi-wayland
+  rofi-network-manager
+  rofimoji
+  rofi-pulse-select
+  rofi-bluetooth
+  rofi-calc
   ];
 
   xdg.configFile."rofi/theme.rasi".text = ''
@@ -127,14 +132,14 @@
       text-color: @green;
     }
   '';
-
-    # Tambahkan script power menu
-  home.file.".local/bin/powermenu".text = ''
-    #!/usr/bin/env bash
-    export ROFI_COMMAND=rofi-wayland
-    rofi-power-menu --theme ~/.config/rofi/theme.rasi
-  '';
-  home.file.".local/bin/powermenu".executable = true;
+  #
+  #   # Tambahkan script power menu
+  # home.file.".local/bin/powermenu".text = ''
+  #   #!/usr/bin/env bash
+  #   export ROFI_COMMAND=rofi-wayland
+  #   rofi-power-menu --theme ~/.config/rofi/theme.rasi
+  # '';
+  # home.file.".local/bin/powermenu".executable = true;
 }
 
 

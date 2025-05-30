@@ -209,7 +209,7 @@ let
           interval = 1;
           format = "{icon}  {bandwidthDownBits}";
             "format-alt" = "{ipaddr}/{cidr} {icon}";
-            "format-alt-click" = "click-right";
+            "format-alt-click" = "click-left";
             "format-wifi" = "{icon}  {bandwidthDownBits}";
             "format-icons" = {
           wifi = [ "󰤟" "󰤢" "󰤨" ];
@@ -217,7 +217,7 @@ let
           disconnected = [ "󰅛" ];
         };
           tooltip-format = "{essid} ({signalStrength}%)\nIP: {ipaddr}\nInterface: {ifname}";
-          on-click-right = "kitty -e nmtui";
+          on-click-right = "rofi-network-manager";
         };
         # network = {
         #   format-wifi = "{essid} ({signalStrength}%) ";
@@ -254,6 +254,8 @@ let
           default = [ "" "" "" ];
         };
         "on-click" = "pavucontrol";
+        on-click-right = "rofi-pulse-select";
+
       };
       cava = {
         framerate = 60;

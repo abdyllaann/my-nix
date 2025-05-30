@@ -93,7 +93,6 @@ in
     record
 
     screenshot
-    rofi-bluetooth
     rofi-power-menu
     power-menu
   ];

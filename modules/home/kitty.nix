@@ -60,8 +60,8 @@
     settings = {
       hide_window_decorations = true;
       confirm_os_window_close = 0;
-      # background_opacity = 0.85;
-      background_blur = 10;
+      # background_opacity = 1;
+      # background_blur = 10;
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
