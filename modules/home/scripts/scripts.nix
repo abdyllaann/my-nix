@@ -6,8 +6,10 @@ let
   wallpaper-picker = pkgs.writeShellScriptBin "wallpaper-picker" (
     builtins.readFile ./scripts/wallpaper-picker.sh
   );
-  random-wallpaper = pkgs.writeShellScriptBin "random-wallpaper" (
+   random-wallpaper = pkgs.writeShellScriptBin "random-wallpaper" (
     builtins.readFile ./scripts/random-wallpaper.sh
+  ); rofi-bluetooth = pkgs.writeShellScriptBin "rofi-bluetooth" (
+    builtins.readFile ./scripts/rofi-bluetooth.sh
   );
 
   runbg = pkgs.writeShellScriptBin "runbg" (builtins.readFile ./scripts/runbg.sh);
@@ -91,7 +93,7 @@ in
     record
 
     screenshot
-
+    rofi-bluetooth
     rofi-power-menu
     power-menu
   ];

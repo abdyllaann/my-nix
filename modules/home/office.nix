@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = (with pkgs; [
-    wpsoffice
-    libwps
+    # wpsoffice
+    # libwps
     libreoffice
   ]
   );

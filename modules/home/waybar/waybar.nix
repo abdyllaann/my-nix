@@ -30,10 +30,11 @@ let
         position = "bottom";
         layer = "top";
         modules-left = [
-          "sway/mode"
+          # "sway/mode"
           "clock"
-          "sway/scratchpad"
-          "custom/media"
+          "cava"
+          # "sway/scratchpad"
+          # "custom/media"
         ];
 
         modules-center = [
@@ -42,20 +43,19 @@ let
         ];
 
         modules-right = [
-          "mpd"
+          # "mpd"
           "idle_inhibitor"
-          "pulseaudio"
           "network"
-          "bluetooth"
-          "power-profiles-daemon"
+          # "bluetooth"
+          # "power-profiles-daemon"
           "cpu"
           "memory"
           # "temperature"
+          "pulseaudio"
           "backlight"
           # "keyboard-state"
           # "sway/language"
           "battery"
-          "battery#bat2"
           "tray"
           "custom/power"
         ];
@@ -81,43 +81,61 @@ let
           tooltip = true;
           tooltip-format = "{app}: {title}";
         };
-       "sway/workspaces" = {
-          "disable-scroll" = true;
-          "format" = "{icon}";
-          "format-icons" = {
-          "1" = "";
-          "2" = "";
-          "3" = "";
-          "4" = "";
-          "5" = "";
-          "urgent" = "";
-          "focused" = "";
-          "default" = "";
-         };
-          "on-click" = "swaymsg workspace number {id}";
+        "sway/workspaces" = {
+          format = "{icon}";
+            "format-icons" = {
+            "1" = "󰈹";
+            "2" = "󰓇";
+            "3" = "";
+            "5" = "󰆍";
+          urgent = "󰈅";
+          focused = "󰄯";
+          default = "󰜋";
         };
-
-        "mpd" = {
-          format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ";
-          format-disconnected = "Disconnected ";
-           format-stopped = "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ";
-          unknown-tag = "N/A";
-          interval = 5;
-          consume-icons.on = " ";
-          random-icons = {
-            off = "<span color=\"#f53c3c\"></span> ";
-            on = " ";
-          };
-          repeat-icons.on = " ";
-          single-icons.on = "1 ";
-          state-icons = {
-            paused = "";
-            playing = "";
-          };
-          tooltip-format = "MPD (connected)";
-          tooltip-format-disconnected = "MPD (disconnected)";
+        "window-rewrite-default" = "󰄯";
+        "window-rewrite" = {
+          "class<firefox>" = "󰈹";
+          "class<alacritty>" = "󰆍";
+          "class<spotify>" = "󰓇";
         };
+      };
+       # "sway/workspaces" = {
+       #    "disable-scroll" = true;
+       #    "format" = "{icon}";
+       #    "format-icons" = {
+       #    "1" = "";
+       #    "2" = "";
+       #    "3" = "";
+       #    "4" = "";
+       #    "5" = "";
+       #    "urgent" = "";
+       #    "focused" = "";
+       #    "default" = "";
+       #   };
+       #    # "on-click" = "swaymsg workspace number {id}";
+       #  };
 
+        # "mpd" = {
+        #   format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ";
+        #   format-disconnected = "Disconnected ";
+        #    format-stopped = "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ";
+        #   unknown-tag = "N/A";
+        #   interval = 5;
+        #   consume-icons.on = " ";
+        #   random-icons = {
+        #     off = "<span color=\"#f53c3c\"></span> ";
+        #     on = " ";
+        #   };
+        #   repeat-icons.on = " ";
+        #   single-icons.on = "1 ";
+        #   state-icons = {
+        #     paused = "";
+        #     playing = "";
+        #   };
+        #   tooltip-format = "MPD (connected)";
+        #   tooltip-format-disconnected = "MPD (disconnected)";
+        # };
+        #
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
@@ -131,69 +149,74 @@ let
         };
 
         clock = {
-          # # format = "It's {:%A} | {:%Y-%m-%d} | {:%H:%M}";
-          # tooltip-format = "<big>{:%A, %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>";
-          # format-alt = "It's {:%A} | {:%Y-%m-%d} | {:%H:%M}";
-          # tooltip-format = "<big>it's {:%Y %B} | {:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>";
-          # format-alt = "it's {}";
+
           "interval" = 1;
           "format" = "It's {:%A, %d %b %H:%M:%S}";
         };
-        bluetooth = {
-          format = " {status}";
-          tooltip = true;
-          on-click = "bluez";
-          format-connected = " {device_alias}";
-          format-connected-battery = " {device_alias} {device_battery_percentage}%";
-          tooltip-format = "{controller_alias} ({controller_address})";
-          tooltip-format-connected = "{controller_alias} ({controller_address})\n\n{device_enumerate}";
-          tooltip-format-enumerate-connected = "{device_alias} ({device_address})";
-          tooltip-format-enumerate-connected-battery = "{device_alias} ({device_address}) {device_battery_percentage}%";
-        };
+
         cpu = {
           format = "{usage}% ";
           tooltip = false;
         };
 
-        memory.format = "{}% ";
+        memory ={
+          format = "{}% ";
+          on-click-right = "kitty -e  btop";
+
+        };
 
         backlight = {
           format = "{percent}% {icon}";
           format-icons = [ "" "" "" "" "" "" "" "" "" ];
         };
-
-        battery = {
-          states = {
-            warning = 30;
-            critical = 15;
-          };
-          format = "{capacity}% {icon}";
-          format-full = "{capacity}% {icon}";
-          format-charging = "{capacity}% ";
-          format-plugged = "{capacity}% ";
-          format-alt = "{time} {icon}";
-          format-icons = [ "" "" "" "" "" ];
+      battery = {
+        states = {
+          warning = 30;
+          critical = 15;
         };
-
-        "battery#bat2".bat = "BAT2";
-
-        "power-profiles-daemon" = {
-          format = "{icon}";
-          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
-          tooltip = true;
-          format-icons = {
-            default = "";
-            performance = "";
-            balanced = "";
-            "power-saver" = "";
-          };
-        };
+        format = "{icon}   {capacity}%";
+        "format-charging" = "⚡{capacity}%";
+        "format-plugged" = "  {capacity}%";
+        "format-icons" = [ "" "" "" "" "" ];
+      };
+        # battery = {
+        #   states = {
+        #     warning = 30;
+        #     critical = 15;
+        #   };
+        #   format = "{capacity}% {icon}";
+        #   format-full = "{capacity}% {icon}";
+        #   format-charging = "{capacity}% ";
+        #   format-plugged = "{capacity}% ";
+        #   format-alt = "{time} {icon}";
+        #   format-icons = [ "" "" "" "" "" ];
+        # };
+        #
+        # "battery#bat2".bat = "BAT2";
+        #
+        # "power-profiles-daemon" = {
+        #   format = "{icon}";
+        #   tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+        #   tooltip = true;
+        #   format-icons = {
+        #     default = "";
+        #     performance = "";
+        #     balanced = "";
+        #     "power-saver" = "";
+        #   };
+        # };
         network = {
-          format-wifi = " {signalStrength}%";
-          format-ethernet = "󰈀 ";
-          format-disconnected = "󰖪 Offline";
+          interval = 1;
+          format = "{icon}  {bandwidthDownBits}";
+            "format-alt" = "{ipaddr}/{cidr} {icon}";
+            "format-alt-click" = "click-right";
+            "format-wifi" = "{icon}  {bandwidthDownBits}";
+            "format-icons" = {
+          wifi = [ "󰤟" "󰤢" "󰤨" ];
+          ethernet = [ "󰈀" ];
+          disconnected = [ "󰅛" ];
+        };
           tooltip-format = "{essid} ({signalStrength}%)\nIP: {ipaddr}\nInterface: {ifname}";
-          on-click = "kitty -e nmtui";
           on-click-right = "kitty -e nmtui";
         };
         # network = {
@@ -204,16 +227,55 @@ let
         #   format-disconnected = "Disconnected ⚠";
         #   # format-alt = "{ifname}: {ipaddr}/{cidr}";
         # };
+        # pulseaudio = {
+        #   format = "{icon} {volume}%";
+        #   format-muted = "<span foreground='${white}'> </span> {volume}%";
+        #   format-icons = {
+        #     default = [ "<span foreground='${white}'> </span>" ];
+        #   };
+        #   scroll-step = 2;
+        #   on-click = "pamixer -t";
+        #   on-click-right = "pavucontrol";
+        # };
         pulseaudio = {
-          format = "{icon} {volume}%";
-          format-muted = "<span foreground='${white}'> </span> {volume}%";
-          format-icons = {
-            default = [ "<span foreground='${white}'> </span>" ];
-          };
-          scroll-step = 2;
-          on-click = "pamixer -t";
-          on-click-right = "pavucontrol";
+        format = "{icon}  {volume}%";
+        "format-bluetooth" = "{icon} {volume}%";
+        "format-bluetooth-muted" = " ";
+        "format-muted" = "  {format_source}";
+        "format-source" = " {volume}%";
+        "format-source-muted" = "";
+        "format-icons" = {
+          headphone = " ";
+          "hands-free" = "";
+          headset = "🎧";
+          phone = "";
+          portable = "";
+          car = "";
+          default = [ "" "" "" ];
         };
+        "on-click" = "pavucontrol";
+      };
+      cava = {
+        framerate = 60;
+        autosens = 1;
+        bars = 14;
+        lower_cutoff_freq = 50;
+        higher_cutoff_freq = 10000;
+        method = "pipewire";
+        source = "auto";
+        stereo = true;
+        reverse = false;
+        bar_delimiter = 0;
+        monstercat = false;
+        waves = false;
+        noise_reduction = 0.77;
+        input_delay = 2;
+        "format-icons" = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+        actions = {
+          "on-click-right" = "mode";
+        };
+      };
+
         # pulseaudio = {
         #   format = "{volume}% {icon} {format_source}";
         #   format-bluetooth = "{volume}% {icon} {format_source}";

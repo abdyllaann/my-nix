@@ -22,7 +22,7 @@
     gvfs
     samba
     gnome-keyring
-        libsecret
+    libsecret
     nautilus
     nautilus-open-any-terminal
     seahorse # opsional, GUI

@@ -73,7 +73,7 @@
     # brave
     mpv
     filezilla
-    # blueman
+    blueman
     # nemo-with-extensions
  
     obs-studio
