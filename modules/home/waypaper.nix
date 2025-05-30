@@ -5,7 +5,7 @@
   xdg.configFile."waypaper/config.ini".text = ''
     [Settings]
     language = en
-    folder = ~/nix/wallpapers/
+    folder = ~/nix/wallpapers
     monitors = All
     wallpaper = ~/nix/wallpapers/
     backend = swww
