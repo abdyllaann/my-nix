@@ -20,7 +20,7 @@
     yt-dlp-light
     eza
     btop
-    superfile
+    
     microfetch
     tlrc
     # yazi
@@ -71,7 +71,6 @@
     telegram-desktop
     zapzap
     # brave
-    mpv
     filezilla
     blueman
     # nemo-with-extensions
@@ -88,7 +87,7 @@
 
     ## System Tools
     # appimage-run
-    nordic
+    # nordic
     libnotify
     libsForQt5.kcalc
     dconf
