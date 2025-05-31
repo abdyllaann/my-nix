@@ -20,7 +20,7 @@
     yt-dlp-light
     eza
     btop
-    
+    ani-cli 
     microfetch
     tlrc
     # yazi
