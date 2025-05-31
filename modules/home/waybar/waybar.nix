@@ -160,7 +160,7 @@ let
 
         memory ={
           format = "{}% ";
-          on-click-right = "kitty -e  btop";
+          on-click-right = "foot -e  btop";
 
         };
 

@@ -115,7 +115,7 @@
       #   [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ] && exec tmux
       # fi
       #
-      if [ "$TERM" = "xterm-kitty" ]; then
+      if [ "$TERM" = "foot" ]; then
         export TERM=xterm-256color
       fi
 

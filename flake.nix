@@ -6,7 +6,8 @@
     nur.url = "github:nix-community/NUR";
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-
+    nix-filter.url = "github:numtide/nix-filter";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     nix-gaming.url = "github:fufexan/nix-gaming";
 
     ghostty = {

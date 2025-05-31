@@ -11,7 +11,7 @@
 
     config = {
       modifier = "Mod4";
-      terminal = "kitty";
+      terminal = "foot";
       menu = "rofi -show drun";
       bars = [{ command = "swaybar_command waybar"; }];
       gaps = {
@@ -56,12 +56,12 @@
       keybindings = let
         mod = "Mod4";
       in {
-        "${mod}+Return" = "exec kitty";
+        "${mod}+Return" = "exec foot";
         "${mod}+d" = "exec rofi -show drun";
         "${mod}+o" = "exec rofimoji";
         "${mod}+b" = "exec zen";
         "${mod}+e" = "exec nautilus";
-        "${mod}+y" = "exec kitty -e yazi";
+        "${mod}+y" = "exec foot -e yazi";
         "${mod}+z" = "exec zapzap";
         "${mod}+Shift+q" = "exec power-menu";
         "${mod}+q" = "kill";

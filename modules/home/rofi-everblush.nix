@@ -35,7 +35,7 @@
       font: "Maple Mono Bold 16";
       show-icons: true;
       icon-theme: "Papirus-Dark";
-      terminal: "kitty";
+      terminal: "foot";
       drun-display-format: "{icon} {name}";
       location: 0;
       sidebar-mode: true;
