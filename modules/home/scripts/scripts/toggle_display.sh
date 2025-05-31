@@ -9,31 +9,31 @@ case "$CHOICE" in
 Mirror)
   swaymsg output "$EXTERNAL" enable position 0 0
   swaymsg output "$INTERNAL" position 0 0
-  notify-send "Display Mode" "Mirrored"
+  notify-send -t 5000 "Display Mode" "Mirrored"
   ;;
 
 "Extend (Right)")
   swaymsg output "$INTERNAL" enable position 0 0
   swaymsg output "$EXTERNAL" enable position 1920 0
-  notify-send "Display Mode" "Extended (Right)"
+  notify-send -t 5000 "Display Mode" "Extended (Right)"
   ;;
 
 "Extend (Left)")
   swaymsg output "$EXTERNAL" enable position 0 0
   swaymsg output "$INTERNAL" enable position 1920 0
-  notify-send "Display Mode" "Extended (Left)"
+  notify-send -t 5000 "Display Mode" "Extended (Left)"
   ;;
 
 "External Only")
   swaymsg output "$INTERNAL" disable
   swaymsg output "$EXTERNAL" enable position 0 0
-  notify-send "Display Mode" "External Only"
+  notify-send -t 5000 "Display Mode" "External Only"
   ;;
 
 "Internal Only")
   swaymsg output "$EXTERNAL" disable
   swaymsg output "$INTERNAL" enable position 0 0
-  notify-send "Display Mode" "Internal Only"
+  notify-send -t 5000 "Display Mode" "Internal Only"
   ;;
 
 *)

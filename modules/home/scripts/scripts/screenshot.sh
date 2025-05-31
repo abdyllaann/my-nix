@@ -10,12 +10,12 @@ fi
 
 copy() {
   grim -g "$(slurp)" - | wl-copy
-  notify-send "Screenshot copied to clipboard"
+  notify-send -t 5000 "Screenshot copied to clipboard"
 }
 
 save() {
   grim -g "$(slurp)" "$file"
-  notify-send "Screenshot saved to $file"
+  notify-send -t 5000 "Screenshot saved to $file"
 }
 
 swappy_() {
@@ -36,7 +36,7 @@ Save)
   swappy_
   ;;
 *)
-  notify-send "No valid option selected."
+  notify-send -t 5000 "No valid option selected."
   ;;
 esac
 
