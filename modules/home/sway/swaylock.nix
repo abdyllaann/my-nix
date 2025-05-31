@@ -14,8 +14,8 @@
       daemonize = true;
       # timestr="%H:%M";
       datestr = "";
-      screenshots = true;
-      # image = "~/nix/wallpapers/astronaut_jellyfish.jpg";
+      screenshots = false;
+      image = "~/nix/wallpapers/astronaut_jellyfish.jpg";
       ignore-empty-password = true;
 
       indicator = true;
