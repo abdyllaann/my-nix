@@ -43,7 +43,8 @@ let
         ];
 
         modules-right = [
-          # "mpd"
+          # "mpd
+          "tray"
           "idle_inhibitor"
           "network"
           # "bluetooth"
@@ -56,8 +57,6 @@ let
           # "keyboard-state"
           # "sway/language"
           "battery"
-          "tray"
-          "custom/power"
         ];
 
         "keyboard-state" = {
