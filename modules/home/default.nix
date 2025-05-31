@@ -20,7 +20,7 @@
     ./fonts.nix # gtk theme
     # ./hyprland # window manager
     ./kitty.nix # terminal
-    # ./ghostty.nix # terminal
+    ./ghostty.nix # terminal
     ./office.nix # browser
     ./lazygit.nix
     # ./obsidian.nix
