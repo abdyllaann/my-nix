@@ -139,7 +139,6 @@
       startup = [
         { command = "mako"; always = true; }
         { command = "swww-daemon"; always = true; }
-        { command = "waybar"; always = true; }
         { command = "nextcloud"; always = true; }
         { command = "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg"; always = true; }
       ];
