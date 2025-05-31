@@ -11,7 +11,7 @@
     Service = {
       ExecStart = ''
         ${pkgs.swayidle}/bin/swayidle -w \
-          timeout 300 '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator' \
+          timeout 8 '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator' \
           timeout 600 '${pkgs.sway}/bin/swaymsg "output * dpms off"' \
             resume '${pkgs.sway}/bin/swaymsg "output * dpms on"' \
           before-sleep '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator' \
