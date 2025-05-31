@@ -37,5 +37,6 @@
     # ./xdg-mimes.nix # xdg config
     ./yazi.nix # terminal file manager
     # ./hyprlock.nix
+    ./mako.nix #notification
   ];
 }
