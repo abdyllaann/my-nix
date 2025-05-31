@@ -3,7 +3,7 @@
   imports = [
     ./sway.nix
     ./swayidle.nix
-    ./variables.nix
+    ./variable.nix
     # ./i3.nix
     # ./swaynag.nix
   ];
