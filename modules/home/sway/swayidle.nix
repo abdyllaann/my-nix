@@ -18,7 +18,7 @@
     ];
     timeouts = [
       {
-        timeout = 10;
+        timeout = 3;
         command = "swaylock -fF";
       }
     ];
