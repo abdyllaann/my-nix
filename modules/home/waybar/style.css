@@ -65,8 +65,11 @@
 #tray>*:last-child {
     border-radius: 0 12px 12px 0;
 }
-#battery {
+#custom-launcher {
+  padding-left: 10px;
+  padding-right: 16px;
   margin-right: 12px;
+    color: #ffffff;
 }
 #mode,
 #battery,
@@ -77,7 +80,7 @@
 #pulseaudio,
 #idle_inhibitor,
 #backlight,
-#clock
+#clock,
 #mpd,
 #temperature {
     padding: 0 10px;
@@ -106,6 +109,7 @@
 #battery,
 #cpu,
 #memory,
+#custom-launcher,
 #pulseaudio,
 #idle_inhibitor,
 #tray,
@@ -169,18 +173,18 @@
     background-color: rgba(175, 65, 84, 0.8);
 }
 
-#custom-launcher {
-    margin: 4px 1px 4px 5px;
-    padding: 0 10px 0 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    min-width: 15px;
-    transition: all 0.2s;
-}
-
-#custom-launcher:hover {
-    background-color: rgba(80, 80, 80, 0.4);
-}
+/* #custom-launcher { */
+/*     margin: 4px 1px 4px 5px; */
+/*     padding: 0 10px 0 2px; */
+/*     background-color: rgba(0, 0, 0, 0.4); */
+/*     border-radius: 10px; */
+/*     min-width: 15px; */
+/*     transition: all 0.2s; */
+/* } */
+/**/
+/* #custom-launcher:hover { */
+/*     background-color: rgba(80, 80, 80, 0.4); */
+/* } */
 
 #temperature.critical {
     color: #800020;

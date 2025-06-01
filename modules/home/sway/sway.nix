@@ -3,6 +3,7 @@
 {
     home.packages = with pkgs; [
     autotiling
+    pavucontrol
   ];
   wayland.windowManager.sway = {
     enable = true;
@@ -26,6 +27,7 @@
       floating = {
         modifier = "Mod4";
       };
+      
       fonts = {
         names = [ "Maple Mono" ];
         size = 14.0;
@@ -143,7 +145,7 @@
         { command = "mako"; always = true; }
         # { command = "autotiling"; always = true; }
         { command = "swww-daemon"; always = true; }
-        { command = "nextcloud"; always = true; }
+        { command = "nextcloud"; }
         { command = "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg"; always = true; }
       ];
       output = {
@@ -159,6 +161,6 @@
     };
   };
 
-  # services.mako.enable = true;
+  services.mako.enable = true;
  }
 

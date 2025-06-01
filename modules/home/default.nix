@@ -4,7 +4,7 @@
   imports = [
     ./sway
     ./bat.nix
-    ./fish.nix
+    # ./fish.nix
     ./git.nix
     ./neovim.nix
     ./packages.nix
@@ -20,7 +20,7 @@
     ./fonts.nix # gtk theme
     # ./hyprland # window manager
     ./kitty.nix # terminal
-    ./ghostty.nix # terminal
+    # ./ghostty.nix # terminal
     ./office.nix # browser
     ./lazygit.nix
     ./mpv.nix
@@ -37,6 +37,6 @@
     # ./xdg-mimes.nix # xdg config
     ./yazi.nix # terminal file manager
     # ./hyprlock.nix
-    ./mako.nix #notification
+    # ./mako.nix #notification
   ];
 }

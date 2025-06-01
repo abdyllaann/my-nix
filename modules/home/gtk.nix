@@ -9,7 +9,7 @@
       size = 8;
     };
     theme = {
-      name = "Colloid-Green-Dark-Gruvbox";
+      name = "colloid-gtk-theme";
       package = pkgs.colloid-gtk-theme.override {
         colorVariants = [ "dark" ];
         themeVariants = [ "green" ];

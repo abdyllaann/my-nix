@@ -65,7 +65,7 @@
     };
   };
 
-  powerManagement.cpuFreqGovernor = "performance";
+  powerManagement.cpuFreqGovernor = "schedutil";
 
   boot = {
     kernelModules = [ "acpi_call" ];

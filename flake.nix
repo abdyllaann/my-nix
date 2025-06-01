@@ -6,18 +6,19 @@
     nur.url = "github:nix-community/NUR";
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-    nix-filter.url = "github:numtide/nix-filter";
-    flake-parts.url = "github:hercules-ci/flake-parts";
+
     nix-gaming.url = "github:fufexan/nix-gaming";
 
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
+    # ghostty = {
+    #   url = "github:ghostty-org/ghostty";
+    # };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    nix-filter.url = "github:numtide/nix-filter";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    everblush.url = "github:Everblush/gtk"; 
     spicetify-nix = {
       url = "github:gerg-l/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";

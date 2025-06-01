@@ -23,6 +23,7 @@
     ani-cli 
     microfetch
     tlrc
+    hyperfine
     # yazi
     unrar
     p7zip

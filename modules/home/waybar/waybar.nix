@@ -57,7 +57,14 @@ let
           # "keyboard-state"
           # "sway/language"
           "battery"
+          "custom/launcher"
         ];
+        
+        "custom/launcher" = {
+          format = "";
+          "on-click" = "exec rofi -show drun";
+          tooltip = false;
+        };
 
         "keyboard-state" = {
           numlock = true;

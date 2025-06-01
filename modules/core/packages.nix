@@ -26,6 +26,8 @@
     nautilus
     nautilus-open-any-terminal
     seahorse # opsional, GUI
+    # colloid-gtk-theme
+    # everforest-gtk-theme
   ];
   services.gvfs.enable = true;
   services.dbus.enable = true;
