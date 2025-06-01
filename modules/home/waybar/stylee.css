@@ -1,0 +1,119 @@
+/* Palet Warna */
+@define-color background-dark #1D2021;
+@define-color background-medium #282828;
+@define-color background-semitransparent rgba(0, 0, 0, 0.4);
+@define-color background-light-semitransparent rgba(120, 120, 120, 0.4);
+@define-color background-hover rgba(80, 80, 80, 0.4);
+@define-color text-primary #FBF1C7;
+@define-color red #CC241D;
+@define-color green #98971A;
+@define-color yellow #FABD2F;
+@define-color blue #458588;
+@define-color white #ffffff;
+@define-color magenta #B16286;
+@define-color cyan #689D6A;
+@define-color orange #D65D0E;
+
+/* ================================================================= */
+/* GLOBAL STYLES */
+/* ================================================================= */
+* {
+  font-family: "Maple Mono";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: @text-primary;
+}
+
+#waybar.empty #window {
+  background-color: transparent;
+}
+
+#waybar.solo-on-monitor #sway-workspaces {
+  background-color: transparent;
+}
+
+/* ================================================================= */
+/* BUTTONS AND MODULES */
+/* ================================================================= */
+#workspaces button {
+  padding: 0 5px;
+  border-radius: 10px;
+  background-color: @background-light-semitransparent;
+  color: @text-primary;
+  margin: 2px;
+}
+
+#workspaces button.focused {
+  background-color: @background-semitransparent;
+  color: @text-primary;
+}
+
+#workspaces button.urgent {
+  background-color: @background-semitransparent;
+  color: @red;
+}
+
+#tray {
+  margin: 0 4px;
+  border-radius: 12px;
+  background-color: @background-semitransparent;
+}
+
+#tray > * {
+  padding: 4px 10px;
+  transition: background-color 0.2s;
+}
+
+#tray > *:hover {
+  background-color: @background-hover;
+}
+
+#custom-launcher {
+  padding: 0 10px;
+  margin: 0 12px 0 0;
+  border-radius: 6px;
+  color: @white;
+  background-color: #141b1e;
+}
+
+#mode,
+#battery,
+#cpu,
+#disk,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#clock,
+#mpd,
+#temperature {
+  padding: 0 10px;
+  color: @white;
+  border-radius: 6px;
+  background-color: #141b1e;
+  margin: 0 4px;
+}
+
+#clock {
+  margin-left: 12px;
+  margin-right: 8px;
+  padding: 0 16px;
+  background: #cd5656;
+}
+
+#cava {
+  color: #cd5656;
+}
+
+#idle_inhibitor {
+  padding: 0 10px;
+}
+
+#temperature.critical {
+  color: #800020;
+}

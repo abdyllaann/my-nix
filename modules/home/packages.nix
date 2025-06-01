@@ -1,6 +1,10 @@
-{ pkgs, inputs, system, ... }: {
+{
+  pkgs,
+  inputs,
+  system,
+  ...
+}: {
   home.packages = with pkgs; [
-
     ## CLI Utilities
     tig
     fd
@@ -20,7 +24,7 @@
     yt-dlp-light
     eza
     btop
-    ani-cli 
+    ani-cli
     microfetch
     tlrc
     hyperfine
@@ -43,14 +47,12 @@
     gopls
     delve
     tmux
-    devbox
     dig
     pnpm
     ## Python
     python3
     python-launcher
     python312Packages.ipython
-
     ## Java
     jre
 
@@ -64,21 +66,22 @@
     kubectl
     eksctl
     postman
-
     ## Android / Mobile Dev
     android-tools
     scrcpy
     ## GUI Apps
     telegram-desktop
     zapzap
+    vlc
+    imv
+    rustdesk-flutter
     # brave
+    vivaldi
     filezilla
     blueman
     # nemo-with-extensions
- 
     obs-studio
     winbox4
-   
     ## Printer Support
     cups
     # gutenprint
@@ -92,7 +95,7 @@
     libnotify
     libsForQt5.kcalc
     dconf
-
+    putty
     #game
     pcsx2
     # lutris
@@ -100,8 +103,12 @@
     # winetricks
     # protontricks
 
+    #download manager
+    # aria2
+    varia
+    # persepolis
     ## Formatter (from input)
     #    inputs.alejandra.defaultPackage.${system}
+    # joplin-desktop
   ];
 }
-

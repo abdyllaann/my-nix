@@ -1,14 +1,15 @@
-{ inputs, pkgs, ... }:
 {
-
-
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
     # package = pkgs.yazi-unwrapped;
 
     settings = {
-      manager = {
+      mgr = {
         linemode = "size";
         show_hidden = false;
         show_symlink = true;

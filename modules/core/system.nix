@@ -1,10 +1,10 @@
-{ self
-, pkgs
-, lib
-, inputs
-, ...
-}:
 {
+  self,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
     settings = {
@@ -17,29 +17,36 @@
         # "https://nix-gaming.cachix.org"
         # "https://hyprland.cachix.org"
         # "https://ghostty.cachix.org"
-
       ];
       trusted-public-keys = [
         # "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
         # "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         # "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
-
       ];
     };
   };
   nixpkgs = {
-    overlays = [ inputs.nur.overlays.default ];
+    overlays = [inputs.nur.overlays.default];
   };
-
+  nixpkgs.config.permittedInsecurePackages = [
+    "ventoy-1.1.05"
+  ];
+  zramSwap = {
+    enable = true;
+    priority = 100; # Lebih tinggi dari default swap disk (biasanya 0)
+    memoryPercent = 30; # Gunakan 25% RAM untuk zram (aman jika RAM cukup besar)
+    algorithm = "zstd"; # Kompresi bagus, hemat RAM
+  };
 
   security.polkit.enable = true;
   security.pam.services.swaylock = {
     enableGnomeKeyring = true;
   };
-    services.timesyncd.enable = true;
+  services.timesyncd.enable = true;
+  services.nscd.enable = true;
+  services.resolved.enable = true;
   time.timeZone = "Asia/Jakarta";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
 }
-

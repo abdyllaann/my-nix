@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   custom = {
     font = "Maple Mono";
     font_size = "14px";
@@ -19,21 +22,20 @@ let
     opacity = "1";
     indicator_height = "2px";
   };
-  in
-{
+in {
   programs.waybar = {
     enable = true;
     settings = {
-      mainBar = with custom;{
+      mainBar = with custom; {
         height = 30;
         spacing = 4;
         position = "bottom";
         layer = "top";
         modules-left = [
-          # "sway/mode"
+          "sway/mode"
           "clock"
           "cava"
-          # "sway/scratchpad"
+          "sway/scratchpad"
           # "custom/media"
         ];
 
@@ -59,7 +61,7 @@ let
           "battery"
           "custom/launcher"
         ];
-        
+
         "custom/launcher" = {
           format = "";
           "on-click" = "exec rofi -show drun";
@@ -83,43 +85,35 @@ let
         "sway/scratchpad" = {
           format = "{icon} {count}";
           show-empty = false;
-          format-icons = [ "" "" ];
+          format-icons = ["" ""];
           tooltip = true;
           tooltip-format = "{app}: {title}";
         };
+
         "sway/workspaces" = {
+          on-click = "activate";
           format = "{icon}";
-            "format-icons" = {
-            "1" = "󰈹";
-            "2" = "󰓇";
-            "3" = "";
-            "5" = "󰆍";
-          urgent = "󰈅";
-          focused = "󰄯";
-          default = "󰜋";
+          format-icons = {
+            # default = "";
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+            # active = "󱓻";
+          };
+          persistent-workspaces = {
+            "1" = [];
+            "2" = [];
+            "3" = [];
+            "4" = [];
+            "5" = [];
+          };
         };
-        "window-rewrite-default" = "󰄯";
-        "window-rewrite" = {
-          "class<firefox>" = "󰈹";
-          "class<alacritty>" = "󰆍";
-          "class<spotify>" = "󰓇";
-        };
-      };
-       # "sway/workspaces" = {
-       #    "disable-scroll" = true;
-       #    "format" = "{icon}";
-       #    "format-icons" = {
-       #    "1" = "";
-       #    "2" = "";
-       #    "3" = "";
-       #    "4" = "";
-       #    "5" = "";
-       #    "urgent" = "";
-       #    "focused" = "";
-       #    "default" = "";
-       #   };
-       #    # "on-click" = "swaymsg workspace number {id}";
-       #  };
 
         # "mpd" = {
         #   format = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ";
@@ -155,7 +149,6 @@ let
         };
 
         clock = {
-
           "interval" = 1;
           "format" = "It's {:%A, %d %b %H:%M:%S}";
         };
@@ -165,26 +158,25 @@ let
           tooltip = false;
         };
 
-        memory ={
+        memory = {
           format = "{}% ";
           on-click-right = "foot -e  btop";
-
         };
 
         backlight = {
           format = "{percent}% {icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" "" ];
+          format-icons = ["" "" "" "" "" "" "" "" ""];
         };
-      battery = {
-        states = {
-          warning = 30;
-          critical = 15;
+        battery = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{icon}   {capacity}%";
+          "format-charging" = "⚡{capacity}%";
+          "format-plugged" = "  {capacity}%";
+          "format-icons" = ["" "" "" "" ""];
         };
-        format = "{icon}   {capacity}%";
-        "format-charging" = "⚡{capacity}%";
-        "format-plugged" = "  {capacity}%";
-        "format-icons" = [ "" "" "" "" "" ];
-      };
         # battery = {
         #   states = {
         #     warning = 30;
@@ -214,14 +206,14 @@ let
         network = {
           interval = 1;
           format = "{icon}  {bandwidthDownBits}";
-            "format-alt" = "{ipaddr}/{cidr} {icon}";
-            "format-alt-click" = "click-left";
-            "format-wifi" = "{icon}  {bandwidthDownBits}";
-            "format-icons" = {
-          wifi = [ "󰤟" "󰤢" "󰤨" ];
-          ethernet = [ "󰈀" ];
-          disconnected = [ "󰅛" ];
-        };
+          "format-alt" = "{ipaddr}/{cidr} {icon}";
+          "format-alt-click" = "click-left";
+          "format-wifi" = "{icon}  {bandwidthDownBits}";
+          "format-icons" = {
+            wifi = ["󰤟" "󰤢" "󰤨"];
+            ethernet = ["󰈀"];
+            disconnected = ["󰅛"];
+          };
           tooltip-format = "{essid} ({signalStrength}%)\nIP: {ipaddr}\nInterface: {ifname}";
           on-click-right = "rofi-network-manager";
         };
@@ -241,67 +233,47 @@ let
         #   };
         #   scroll-step = 2;
         #   on-click = "pamixer -t";
-        #   on-click-right = "pavucontrol";
+        #   on-click-right = "pavuconl";
         # };
         pulseaudio = {
-        format = "{icon}  {volume}%";
-        "format-bluetooth" = "{icon} {volume}%";
-        "format-bluetooth-muted" = " ";
-        "format-muted" = "  {format_source}";
-        "format-source" = " {volume}%";
-        "format-source-muted" = "";
-        "format-icons" = {
-          headphone = " ";
-          "hands-free" = "";
-          headset = "🎧";
-          phone = "";
-          portable = "";
-          car = "";
-          default = [ "" "" "" ];
+          format = "{icon}  {volume}%";
+          "format-bluetooth" = "{icon} {volume}%";
+          "format-bluetooth-muted" = " ";
+          "format-muted" = "  {format_source}";
+          "format-source" = " {volume}%";
+          "format-source-muted" = "";
+          "format-icons" = {
+            headphone = " ";
+            "hands-free" = "";
+            headset = "🎧";
+            phone = "";
+            portable = "";
+            car = "";
+            default = ["" "" ""];
+          };
+          "on-click" = "rofi-audio";
+          on-click-right = "swaymsg exec pavucontrol && swaymsg [app_id=pavucontrol] floating enable";
         };
-        "on-click" = "pavucontrol";
-        on-click-right = "rofi-pulse-select";
-
-      };
-      cava = {
-        framerate = 60;
-        autosens = 1;
-        bars = 14;
-        lower_cutoff_freq = 50;
-        higher_cutoff_freq = 10000;
-        method = "pipewire";
-        source = "auto";
-        stereo = true;
-        reverse = false;
-        bar_delimiter = 0;
-        monstercat = false;
-        waves = false;
-        noise_reduction = 0.77;
-        input_delay = 2;
-        "format-icons" = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
-        actions = {
-          "on-click-right" = "mode";
+        cava = {
+          framerate = 60;
+          autosens = 1;
+          bars = 14;
+          lower_cutoff_freq = 50;
+          higher_cutoff_freq = 10000;
+          method = "pipewire";
+          source = "auto";
+          stereo = true;
+          reverse = false;
+          bar_delimiter = 0;
+          monstercat = false;
+          waves = false;
+          noise_reduction = 0.77;
+          input_delay = 2;
+          "format-icons" = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+          actions = {
+            "on-click-right" = "mode";
+          };
         };
-      };
-
-        # pulseaudio = {
-        #   format = "{volume}% {icon} {format_source}";
-        #   format-bluetooth = "{volume}% {icon} {format_source}";
-        #   format-bluetooth-muted = " {icon} {format_source}";
-        #   format-muted = " {format_source}";
-        #   format-source = "{volume}% ";
-        #   format-source-muted = "";
-        #   format-icons = {
-        #     headphone = "";
-        #     hands-free = "";
-        #     headset = "";
-        #     phone = "";
-        #     portable = "";
-        #     car = "";
-        #     default = [ "" "" "" ];
-        #   };
-        #   on-click = "pavucontrol";
-        # };
 
         "custom/media" = {
           format = "{icon} {text}";
@@ -329,8 +301,6 @@ let
         # };
       };
     };
-        style = builtins.readFile ./style.css;
-
+    style = builtins.readFile ./style.css;
   };
 }
-

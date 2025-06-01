@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-
 {
-    home.packages = with pkgs; [
+  config,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs; [
     autotiling
     pavucontrol
   ];
@@ -11,10 +13,21 @@
     systemd.enable = true;
 
     config = {
+      input = {
+        # Ganti sesuai nama device (cek `swaymsg -t get_inputs`)
+        "1267:23:Elan_Touchpad" = {
+          #   left_handed = true;
+          tap = "enabled";
+          natural_scroll = "enabled";
+          #   dwt = true;
+          #   accel_profile = "flat";
+          #   pointer_accel = 0.5;
+        };
+      };
       modifier = "Mod4";
       terminal = "foot";
       menu = "rofi -show drun";
-      bars = [{ command = "swaybar_command waybar"; }];
+      bars = [{command = "swaybar_command waybar";}];
       gaps = {
         inner = 5;
         outer = 7;
@@ -27,9 +40,9 @@
       floating = {
         modifier = "Mod4";
       };
-      
+
       fonts = {
-        names = [ "Maple Mono" ];
+        names = ["Maple Mono"];
         size = 14.0;
       };
       colors = {
@@ -61,9 +74,9 @@
         "${mod}+Return" = "exec foot";
         "${mod}+d" = "exec rofi -show drun";
         "${mod}+o" = "exec rofimoji";
-        "${mod}+b" = "exec zen";
+        "${mod}+b" = "exec vivaldi";
         "${mod}+e" = "exec nautilus";
-        "${mod}+y" = "exec foot -e yazi";
+        "${mod}+y" = "exec yazi-nvim";
         "${mod}+z" = "exec zapzap";
         "${mod}+Shift+q" = "exec power-menu";
         "${mod}+q" = "kill";
@@ -142,11 +155,20 @@
         };
       };
       startup = [
-        { command = "mako"; always = true; }
+        {
+          command = "mako";
+          always = true;
+        }
         # { command = "autotiling"; always = true; }
-        { command = "swww-daemon"; always = true; }
-        { command = "nextcloud"; }
-        { command = "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg"; always = true; }
+        {
+          command = "swww-daemon";
+          always = true;
+        }
+        {command = "nextcloud";}
+        {
+          command = "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg";
+          always = true;
+        }
       ];
       output = {
         "eDP-1" = {
@@ -162,5 +184,4 @@
   };
 
   services.mako.enable = true;
- }
-
+}

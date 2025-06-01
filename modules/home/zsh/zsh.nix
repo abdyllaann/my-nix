@@ -1,10 +1,10 @@
-{ hostname
-, config
-, pkgs
-, host
-, ...
-}:
 {
+  hostname,
+  config,
+  pkgs,
+  host,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     # enableCompletion = true;
@@ -114,7 +114,14 @@
       # if command -v tmux >/dev/null; then
       #   [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ] && exec tmux
       # fi
+      #  if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [[ $- == *i* ]]; then
+      #    exec tmux attach || exec tmux new
+      #  fi
       #
+      # if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [[ $- == *i* ]]; then
+      #   exec tm
+      # fi
+
       if [ "$TERM" = "foot" ]; then
         export TERM=xterm-256color
       fi

@@ -1,19 +1,17 @@
-{ pkgs
-, inputs
-, username
-, host
-, ...
-}:
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
+  pkgs,
+  inputs,
+  username,
+  host,
+  ...
+}: {
+  imports = [inputs.home-manager.nixosModules.home-manager];
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs username host; };
+    extraSpecialArgs = {inherit inputs username host;};
     users.${username} = {
-      imports =
-
-        [ ./../home ];
+      imports = [./../home];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "25.05";
@@ -26,9 +24,10 @@
     description = "${username}";
     extraGroups = [
       "networkmanager"
+      "libvirtd"
       "wheel"
     ];
     shell = pkgs.zsh;
   };
-  nix.settings.allowed-users = [ "${username}" ];
+  nix.settings.allowed-users = ["${username}"];
 }

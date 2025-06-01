@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   # install package
@@ -10,12 +8,14 @@
     tailscale
     android-studio
     intel-compute-runtime
-    qemu_full
+    # qemu_full
     virt-manager
     libusb1
     OVMF
     rar
     luarocks
+    ventoy-full
+
     rustc
     cargo
     cifs-utils
@@ -37,7 +37,7 @@
   #   xterm
   # ];
 
-  services.xserver.excludePackages = [ pkgs.xterm ];
+  # services.xserver.excludePackages = [ pkgs.xterm ];
   # # install docker
   # virtualisation.docker.enable = true;
   # users.extraGroups.docker.members = [ "abdyllaan" ];
@@ -53,13 +53,8 @@
 
   # enable the tailscale service
 
-
-
-
   # programs.teamviewer = {
   #   enable = true;
   # };
   #
-
-
 }

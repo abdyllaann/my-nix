@@ -18,7 +18,7 @@
     };
     nix-filter.url = "github:numtide/nix-filter";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    everblush.url = "github:Everblush/gtk"; 
+    everblush.url = "github:Everblush/gtk";
     spicetify-nix = {
       url = "github:gerg-l/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,33 +33,32 @@
       flake = false;
     };
 
- 
-
     zig.url = "github:mitchellh/zig-overlay";
 
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs =
-    { self, nixpkgs, ... }@inputs:
-    let
-      username = "abdyllaan";
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      lib = nixpkgs.lib;
-    in
-    {
-      nixosConfigurations.killua = nixpkgs.lib.nixosSystem {
-        inherit system;
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    username = "abdyllaan";
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    lib = nixpkgs.lib;
+  in {
+    nixosConfigurations.killua = nixpkgs.lib.nixosSystem {
+      inherit system;
 
-        modules = [ ./hosts ];
-        specialArgs = {
-          host = "killua";
-          inherit self inputs username;
-        };
+      modules = [./hosts];
+      specialArgs = {
+        host = "killua";
+        inherit self inputs username;
       };
     };
+  };
 }

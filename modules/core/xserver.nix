@@ -1,10 +1,13 @@
-{ pkgs, username, ... }:
 {
+  pkgs,
+  username,
+  ...
+}: {
   services = {
     xserver = {
-      enable = true;
+      enable = false;
       xkb.layout = "us";
-      videoDrivers = [ "intel" ];
+      videoDrivers = ["intel"];
     };
 
     # displayManager.autoLogin = {
@@ -16,5 +19,9 @@
     # };
   };
   # To prevent getting stuck at shutdown
-  systemd.extraConfig = "DefaultTimeoutStopSec=10s";
+  # systemd.extraConfig = "DefaultTimeoutStopSec=10s";
+  systemd.settings.Manager = {
+    # DefaultTimeoutStartSec = "10s";
+    DefaultTimeoutStopSec = "10s";
+  };
 }

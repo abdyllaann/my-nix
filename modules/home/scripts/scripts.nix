@@ -1,14 +1,14 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   wall-change = pkgs.writeShellScriptBin "wall-change" (
     builtins.readFile ./scripts/wall-change.sh
   );
   wallpaper-picker = pkgs.writeShellScriptBin "wallpaper-picker" (
     builtins.readFile ./scripts/wallpaper-picker.sh
   );
-   random-wallpaper = pkgs.writeShellScriptBin "random-wallpaper" (
+  random-wallpaper = pkgs.writeShellScriptBin "random-wallpaper" (
     builtins.readFile ./scripts/random-wallpaper.sh
-  ); rofi-bluetooth = pkgs.writeShellScriptBin "rofi-bluetooth" (
+  );
+  rofi-bluetooth = pkgs.writeShellScriptBin "rofi-bluetooth" (
     builtins.readFile ./scripts/rofi-bluetooth.sh
   );
 
@@ -25,10 +25,10 @@ let
   toggle_waybar = pkgs.writeScriptBin "toggle_waybar" (
     builtins.readFile ./scripts/toggle_waybar.sh
   );
-   toggle_float = pkgs.writeScriptBin "toggle_float" (
+  toggle_float = pkgs.writeScriptBin "toggle_float" (
     builtins.readFile ./scripts/toggle_float.sh
- );
-   toggle_display = pkgs.writeScriptBin "toggle_display" (
+  );
+  toggle_display = pkgs.writeScriptBin "toggle_display" (
     builtins.readFile ./scripts/toggle_display.sh
   );
 
@@ -42,8 +42,9 @@ let
   extract = pkgs.writeScriptBin "extract" (
     builtins.readFile ./scripts/extract.sh
   );
-
-
+  yazi-nvim = pkgs.writeScriptBin "yazi-nvim" (
+    builtins.readFile ./scripts/yazi-nvim.sh
+  );
 
   vm-start = pkgs.writeScriptBin "vm-start" (
     builtins.readFile ./scripts/vm-start.sh
@@ -60,16 +61,19 @@ let
   rofi-power-menu = pkgs.writeScriptBin "rofi-power-menu" (
     builtins.readFile ./scripts/rofi-power-menu.sh
   );
+
+  rofi-audio = pkgs.writeScriptBin "rofi-audio" (
+    builtins.readFile ./scripts/rofi-audio.sh
+  );
   power-menu = pkgs.writeScriptBin "power-menu" (
     builtins.readFile ./scripts/power-menu.sh
   );
-in
-{
+in {
   home.packages = with pkgs; [
     wall-change
     wallpaper-picker
     random-wallpaper
-
+    yazi-nvim
     runbg
     music
     lofi
@@ -85,7 +89,6 @@ in
     compress
     extract
 
-
     vm-start
 
     ascii
@@ -95,5 +98,6 @@ in
     screenshot
     rofi-power-menu
     power-menu
+    rofi-audio
   ];
 }

@@ -1,6 +1,8 @@
-{ inputs, pkgs, ... }:
-
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./sway
     ./bat.nix
@@ -24,7 +26,7 @@
     ./office.nix # browser
     ./lazygit.nix
     ./mpv.nix
-    # ./obsidian.nix
+    ./obsidian.nix
     # ./tmux.nix
     # ./rofi.nix # launcher
     ./rofi-everblush.nix # launcher
@@ -38,5 +40,6 @@
     ./yazi.nix # terminal file manager
     # ./hyprlock.nix
     # ./mako.nix #notification
+    ./niri
   ];
 }

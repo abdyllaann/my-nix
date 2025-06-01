@@ -1,19 +1,18 @@
-{pkgs, ...}:
-{
-  home.packages = with pkgs; [ swaylock-effects ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [swaylock-effects];
 
   systemd.user.services.swayidle = {
     Unit = {
       Description = "Idle manager for Wayland";
-      After = [ "graphical-session.target" ];
+      After = ["graphical-session.target"];
     };
 
     Service = {
       ExecStart = ''
         ${pkgs.swayidle}/bin/swayidle -w \
-          timeout 300 '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator' \
-          timeout 600 '${pkgs.sway}/bin/swaymsg "output * dpms off"' \
-            resume '${pkgs.sway}/bin/swaymsg "output * dpms on"' \
+          timeout 800 '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator' \
+          timeout 1599 '${pkgs.sway}/bin/swaymsg "output * dpms off"' \
+          resume '${pkgs.sway}/bin/swaymsg "output * dpms on"' \
           before-sleep '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator' \
           lock '${pkgs.swaylock-effects}/bin/swaylock --effect-blur 7x5 --clock --indicator'
       '';
@@ -21,7 +20,7 @@
     };
 
     Install = {
-      WantedBy = [ "graphical-session.target" ];
+      WantedBy = ["graphical-session.target"];
     };
   };
 }
